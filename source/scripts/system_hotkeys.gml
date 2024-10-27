@@ -42,17 +42,20 @@ if (!global.no_quit) {
     //escape key
     if (keyboard_check_pressed(vk_escape) || scheduled_close_button) {
         if (global.esc_always_quits || scheduled_close_button) {
+            with (FadeWarp) if (fadestate!=0) instance_destroy()
             event_game_end()
         } else if (is_ingame()) {
             if (global.pause){
                 instance_destroy_id(PauseMenu)
             } else {
+                with (FadeWarp) if (fadestate!=0) instance_destroy()
                 instance_activate_all_safe()
                 if (global.gen_thumb) generate_save_thumbnail(1)
                 savedata_write()
                 room_goto(rmTitle)
             }
         } else {
+            with (FadeWarp) if (fadestate!=0) instance_destroy()
             if (room=rmMenu) room_goto(rmTitle)
             else event_game_end()
         }
@@ -60,11 +63,13 @@ if (!global.no_quit) {
     
     //close game
     if (keyboard_check_pressed(vk_f4) && keyboard_check(vk_alt)) {
+        with (FadeWarp) if (fadestate!=0) instance_destroy()
         event_game_end()
     }
     
     //go to title
     if (keyboard_check_pressed(vk_f2)) {
+        with (FadeWarp) if (fadestate!=0) instance_destroy()
         instance_activate_all_safe()
         if (is_ingame()) {
             instance_destroy_id(PauseMenu)
