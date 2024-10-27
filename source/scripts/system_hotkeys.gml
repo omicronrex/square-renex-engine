@@ -8,6 +8,7 @@ if (key_restart(vi_pressed) && !global.no_restart) {
             room_restart()
             exit
         }
+        with (FadeWarp) if (fadestate!=0) instance_destroy()
         savedata_load()
     }
 }

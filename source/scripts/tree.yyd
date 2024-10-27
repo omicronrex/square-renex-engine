@@ -267,6 +267,7 @@
 	|ease
 	|simple_collision
 	|good_bounce
+	|screen_fade
 +avoidance/miku
 	|timeline_miku
 	|timeline_miku_front

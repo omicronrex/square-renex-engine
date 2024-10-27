@@ -484,8 +484,8 @@
 	|BackgroundDaemon
 	|WaterSurface
 	|UnsolidItemBlock
-	|Fader
 	|PropBlood
+	|Fader
 	|SoundEvent
 |PlayerStart
 |Block

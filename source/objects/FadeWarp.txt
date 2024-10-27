@@ -1,7 +1,7 @@
 sprite=sprFadeWarp
 visible=1
 solid=0
-persistent=0
+persistent=1
 depth=1000
 parent=Warp
 mask=

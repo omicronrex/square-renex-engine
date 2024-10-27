@@ -1,7 +1,7 @@
 sprite=sprFader
 visible=1
 solid=0
-persistent=1
-depth=-100
-parent=ActiveParent
+persistent=0
+depth=0
+parent=ActiveIngame
 mask=

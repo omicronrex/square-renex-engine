@@ -472,7 +472,7 @@ MiniSpikeVHardD
 MiniSpikeVHardL
 MiniSpikeVHardR
 MiniSpikeVHardU
-Fader
+
 FadeWarp
 CameraFocus
 ReverserOn
@@ -480,3 +480,5 @@ ReverserOff
 InfiniteJump
 
 SoundEvent
+Fader
+
