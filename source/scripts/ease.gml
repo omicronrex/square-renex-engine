@@ -18,6 +18,9 @@ var c2;c2 = c1 * 1.525;
 var c3;c3 = c1 + 1;
 
 switch argument5 {
+    case "EaseLinear":
+        _f = _x;
+        break;
     case "EaseInSine":
         _f = 1 - cos((_x * pi) / 2);
         break;
@@ -62,18 +65,6 @@ switch argument5 {
         break;
     case "EaseInOutQuint":
         if (_x < 0.5) { _f = 16 * _x * _x * _x * _x * _x } else { _f = 1 - power(-2 * _x + 2, 5) / 2 }
-        break;
-    case "EaseInExpo":
-        if (_x == 0) { _f = 0 } else { _f = power(2, 10 * _x - 10) }
-        show_message(str_cat("EaseInExpo with _x: ",_x," _f: ",_f))
-        break;
-    case "EaseOutExpo":
-        if (_x == 1) { _f = 1 } else { _f = 1 - power(2, -10 * _x) }
-        break;
-    case "EaseInOutExpo":
-        if (_x < 0.5) { _f = power(2, 20 * _x - 10) / 2 } else { _f = (2 - power(2, -20 * _x + 10)) }
-        if (_x == 0)  { _f = 0 }
-        if (_x == 1)  { _f = 1 }
         break;
     case "EaseInCirc":
         _f = 1 - sqrt(1 - power(_x, 2));

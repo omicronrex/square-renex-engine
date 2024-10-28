@@ -45,6 +45,7 @@ move_spd=1
 move_time=0
 move_t=0
 move_relative=0
+move_easing="EaseLinear"
 
 move_to_xy_grav[0]=noone
 move_to_xy_grav[1]=noone
@@ -77,11 +78,11 @@ if (rotating) {
 if (move_to_xy[0]!=noone && move_to_xy[1]!=noone && move_spd!=0 && trg) {
     move_t=approach(move_t,move_time,1)
     if (!move_relative) {
-        x=lerp(xstart,move_to_xy[0],move_t/move_time)
-        y=lerp(ystart,move_to_xy[1],move_t/move_time)
+        x=ease(move_t,0,move_time,xstart,move_to_xy[0],move_easing)
+        y=ease(move_t,0,move_time,ystart,move_to_xy[1],move_easing)
     } else {
-        x=lerp(xstart,xstart+move_to_xy[0],move_t/move_time)
-        y=lerp(ystart,ystart+move_to_xy[1],move_t/move_time)
+        x=ease(move_t,0,move_time,xstart,xstart+move_to_xy[0],move_easing)
+        y=ease(move_t,0,move_time,ystart,ystart+move_to_xy[1],move_easing)
     }
 }
 
@@ -187,6 +188,7 @@ applies_to=self
 //field move_to_xy: xy
     //field move_spd: number
     //field move_relative: false
+    //field move_easing: enum("EaseLinear","EaseInSine","EaseOutSine","EaseInOutSine","EaseInQuad","EaseOutQuad","EaseInOutQuad","EaseInCubic","EaseOutCubic","EaseInOutCubic","EaseInQuart","EaseOutQuart","EaseInOutQuart","EaseInQuint","EaseOutQuint","EaseInOutQuint","EaseInCirc","EaseOutCirc","EaseInOutCirc","EaseInBack","EaseOutBack","EaseInOutBack")
 //field move_to_xy_grav: xy
     //field move_grav: number
 //field no_destroy_outside: false
@@ -195,7 +197,7 @@ applies_to=self
 //field trap_stop_index: number
 
 if (move_to_xy[0]!=noone && move_to_xy[1]!=noone && move_spd) {
-    move_time=round_unbiased(point_distance(x,y,move_to_xy[0],move_to_xy[1])/move_spd)
+    move_time=round_unbiased(point_distance(xstart,ystart,move_to_xy[0],move_to_xy[1])/move_spd)
     move_time=max(move_time,1)
 }
 
