@@ -38,8 +38,6 @@ t+=1
 if (t mod 3!=0) exit
 if (anglechange && speed) image_angle=random(360)
 
-var setting;setting=settings("bloodcoll")
-
 if (setting==0 || setting==1) attach=instance_place(x+hspeed,y+vspeed,Block)
 if (!attach && setting==0) attach=instance_place(x+hspeed,y+vspeed,PlayerKiller)
 

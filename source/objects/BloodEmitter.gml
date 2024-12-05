@@ -6,6 +6,7 @@ applies_to=self
 */
 image_speed=0
 blood=settings("blood")
+setting=settings("bloodcoll")
 
 // Don't spawn player gibs if dotkid death, keep only blood splatter
 if (instance_exists(Player)) if (Player.dotkid) {

@@ -1,7 +1,8 @@
 ///emit_prop_blood(amount)
 //blood for non-player objects like dumb bugz and yoshi
-var i,num;
+var i,num,setting;
 num=argument0
+setting=settings("bloodcoll")
 
 if (global.blood_clusters) {
     num=round(num/2)
@@ -14,6 +15,7 @@ if (global.blood_clusters) {
         i.direction=irandom(35)*10
         i.speed=random(8)*dt
         i.gravity=(0.2+random(0.2))*dt*dt
+        i.setting=setting
         if (irandom(1)) {
             i.hspeed+=hspeed
             i.vspeed+=vspeed
@@ -26,6 +28,7 @@ if (global.blood_clusters) {
         i.direction=irandom(35)*10
         i.speed=random(8)*dt
         i.gravity=(0.2+random(0.2))*dt*dt
+        i.setting=setting
         if (irandom(1)) {
             i.hspeed+=hspeed
             i.vspeed+=vspeed
