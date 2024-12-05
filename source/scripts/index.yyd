@@ -313,3 +313,4 @@ vine_check_right
 set_game_speed
 savedata_schedule_write
 screen_fade
+opt_blood_collision
