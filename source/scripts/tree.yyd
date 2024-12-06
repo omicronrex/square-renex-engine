@@ -204,6 +204,7 @@
 	|player_swap_keys
 	|vine_check_left
 	|vine_check_right
+	|correct_player_mask
 +keypick
 	|key_clear
 	|key_add
