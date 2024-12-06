@@ -155,7 +155,7 @@ for (j=0;j<joycount;j+=1) {
         joy_button[j,b]=settings("joymap_"+name+"_"+string(b))
     }
 }
-
+/*
 if (joycount==0) {
     input_clear()
     i=instance_create(x,y,OptionsMenu)
@@ -173,7 +173,9 @@ draw_set_color(global.text_color)
 
 draw_set_halign(1)
 draw_set_font(fntFileBig)
-if (joy==-1) {
+if (joycount==0) {
+    draw_text(400,64,"- "+lang("no bitches?")+" -")
+} else if (joy==-1) {
     draw_text(400,64,"- "+lang("joypushtosel")+" -")
 } else {
     if (lit) draw_text(400,64,"> ("+string(joy+1)+") "+joystick_name(joy)+" <")
