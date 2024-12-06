@@ -1,8 +1,10 @@
 //you can replace all the default engine text here
 
-//globals
+//general
 add_string("deaths","Deaths")
 add_string("time","Time")
+add_string("yes","Yes")
+add_string("no","No")
 
 //volume check
 add_string("volcheck","Volume Check#")
@@ -10,6 +12,8 @@ add_string("volcheckvol","Sound Volume")
 add_string("volcheck2"," to confirm")
 add_string("volcheck3","Use ")
 add_string("volcheck4"," and ")
+add_string("copy settings","Would you like to copy your preferences#from a previously played game?")
+add_string("copy settings 2","[%] and [%] to select - [%] to confirm")
 
 //ingame text
 add_string("warptohub","UP to return")

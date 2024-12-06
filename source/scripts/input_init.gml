@@ -6,6 +6,24 @@ globalvar joy_old;
 
 custom_keys()
 
+if (vii_sizeof==10) {
+    //check for default keybinds for the settings copier
+    if  (vii_default[0]==vk_left)
+    and (vii_default[1]==vk_right)
+    and (vii_default[2]==vk_up)
+    and (vii_default[3]==vk_down)
+    and (vii_default[4]==vk_shift)
+    and (vii_default[5]==ord("Z"))
+    and (vii_default[6]==ord("R"))
+    and (vii_default[7]==ord("P"))
+    and (vii_default[8]==ord("S"))
+    and (vii_default[9]==ord("Q")) {
+        global.uses_default_keybinds=true
+    } else {
+        global.uses_default_keybinds=false
+    }
+}
+
 input_clear()
 
 global.joysupdated=false
