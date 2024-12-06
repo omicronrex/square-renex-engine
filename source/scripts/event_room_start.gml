@@ -60,3 +60,5 @@ if (global.onload_trigger) {
     global.onload_trigger=false
     with (all) event_perform(ev_trigger,tr_onload)
 }
+
+check_engine_parenting()

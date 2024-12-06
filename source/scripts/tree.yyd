@@ -175,6 +175,7 @@
 	|update_triggers
 	|draw_window_caption
 	|set_game_speed
+	|check_engine_parenting
 +player
 	|player_jump
 	|player_capjump

@@ -52,6 +52,8 @@ move_to_xy_grav[1]=noone
 move_grav=0
 
 trg=0
+
+variables_defined=true
 #define Step_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -195,6 +197,11 @@ applies_to=self
 //field trigger_on_create: false
 //field trap_redir_index: number
 //field trap_stop_index: number
+
+if (!variable_local_exists("variables_defined")) {
+    show_error("Error in instance "+string(id)+" of object "+object_get_name(object_index)+": Gizmo parent variables are not defined. Please use event_inherited()/Call Event on your object's Create event to correctly set up "+object_get_name(object_get_parent(object_index))+" inheritance.",1)
+    exit
+}
 
 if (move_to_xy[0]!=noone && move_to_xy[1]!=noone && move_spd) {
     move_time=round_unbiased(point_distance(xstart,ystart,move_to_xy[0],move_to_xy[1])/move_spd)
