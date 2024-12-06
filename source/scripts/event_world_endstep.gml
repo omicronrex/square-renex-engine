@@ -63,13 +63,7 @@ if (settings("fullscreen")) {
     else curalpha=max(maxalpha,curalpha-0.05*dt)
     if (curalpha>0) window_set_cursor(cr_default)
     else window_set_cursor(cr_none)
-
-    //fix mouse_x
-    var s;s=min(global.dw/global.width,global.dh/global.height)
-    mouse_xfixed=view_xview+((display_mouse_get_x()-global.woffset)/s)
 } else {
-    //keep mouse_x on windowed
-    mouse_xfixed=mouse_x
     curalpha=1
 }
 

@@ -110,6 +110,8 @@
 		|unlock_controls
 		|system_hotkeys
 		|debug_keys
+		|mouse_room_x
+		|mouse_room_y
 	+rendering
 		|envelope_init
 		|envelope_prepare

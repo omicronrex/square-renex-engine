@@ -314,3 +314,6 @@ set_game_speed
 savedata_schedule_write
 screen_fade
 opt_blood_collision
+mouse_room_x
+
+mouse_room_y
