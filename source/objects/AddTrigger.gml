@@ -170,5 +170,5 @@ action_id=603
 applies_to=self
 */
 if (trigger_type=="soft") {
-    with (instance) event_perform_object(Gizmo,ev_trigger,ev_traptriggered)
+    with (instance) event_perform_object(Gizmo,ev_trigger,tr_traptriggered)
 } else event_inherited()

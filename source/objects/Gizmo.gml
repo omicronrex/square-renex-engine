@@ -208,7 +208,7 @@ if (move_to_xy[0]!=noone && move_to_xy[1]!=noone && move_spd) {
     move_time=max(move_time,1)
 }
 
-if (trigger_on_create) event_trigger(ev_traptriggered)
+if (trigger_on_create) event_trigger(tr_traptriggered)
 #define Other_8
 /*"/*'/**//* YYD ACTION
 lib_id=1

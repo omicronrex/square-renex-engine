@@ -1,2 +1,2 @@
-constant=ev_draw_begin
+constant=tr_draw_begin
 kind=1

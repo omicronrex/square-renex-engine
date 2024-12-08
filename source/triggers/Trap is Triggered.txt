@@ -1,2 +1,2 @@
-constant=ev_traptriggered
+constant=tr_traptriggered
 kind=0

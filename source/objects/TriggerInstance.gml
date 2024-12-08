@@ -19,7 +19,7 @@ applies_to=self
 if (user_event!=noone)
     with (inst) event_user(other.user_event)
 else
-    with (inst) event_trigger(ev_traptriggered)
+    with (inst) event_trigger(tr_traptriggered)
 
 instance_destroy()
 #define Other_4

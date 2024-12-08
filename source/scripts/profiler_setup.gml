@@ -9,11 +9,11 @@ object_event_add(o,ev_create,0,"
     repeat (len) {cpu[i]=0 ram[i]=0 fpsf[i]=0 i+=1}
 ")
 
-object_event_add(o,ev_trigger,ev_profilerbegin,"time0=get_timer() ready=1")
+object_event_add(o,ev_trigger,tr_earlybeginstep,"time0=get_timer() ready=1")
 object_event_add(o,ev_keyboard,vk_nokey,"time4=get_timer()")
 object_event_add(o,ev_keyboard,vk_anykey,"time4=get_timer()")
 object_event_add(o,ev_step,ev_step_normal,"time6=get_timer()")
-object_event_add(o,ev_trigger,ev_profilerend,"time7=get_timer()")
+object_event_add(o,ev_trigger,tr_earlyendstep,"time7=get_timer()")
 object_event_add(o,ev_step,ev_step_end,"time8=get_timer()")
 
 object_event_add(o,ev_draw,0,"

@@ -5,7 +5,7 @@ application_surface=surface_set("application_surface",global.APPwidth,global.APP
 
 //call draw end events
 camera_apply()
-with (all) if (visible) event_perform(ev_trigger,ev_draw_end)
+with (all) if (visible) event_perform(ev_trigger,tr_draw_end)
 
 draw_make_opaque()
 d3d_set_depth(0)

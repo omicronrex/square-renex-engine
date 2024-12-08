@@ -1,2 +1,2 @@
-constant=
+constant=tr_earlystep
 kind=0
