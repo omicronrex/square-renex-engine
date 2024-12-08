@@ -80,6 +80,8 @@ global.gen_thumb=false
 global.gen_thumb_cachebg=noone
 
 global.warp_id=""
+global.lastroom=noone
+global.sectionwarp=false
 global.no_pause=0
 global.no_restart=0
 global.no_quit=0

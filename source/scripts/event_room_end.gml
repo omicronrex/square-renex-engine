@@ -27,3 +27,4 @@ memcamt=-1
 camera_shake(0)
 
 global.room_started=false
+global.lastroom=room

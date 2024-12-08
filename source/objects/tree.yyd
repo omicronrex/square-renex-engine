@@ -163,6 +163,7 @@
 	|FadeWarp
 	|WarpToHub
 	|DifficultyWarp
+	|SectionWarp
 +Triggers/Traps
 	+Triggers
 		|Trigger1

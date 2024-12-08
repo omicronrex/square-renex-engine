@@ -25,6 +25,8 @@ if (is_ingame()) {
         }
     }
 
+    with (SectionWarp) event_user(0)
+
     with (Player) if (!place_free(x,y)) if (!try_unstuck()) with (instance_nearest(x,y,PlayerStart)) move_player(x,y,0)
 
     event_world_endstep()

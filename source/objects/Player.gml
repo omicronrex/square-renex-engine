@@ -975,27 +975,42 @@ if (instance_place(x,y,ScreenWrap)) {
     if (hspeed<0 && x<0)           {if (!move_player(x+room_width+marginh,y ,1)) x-=hspeed}
     if (vspeed<0 && y<0)           {if (!move_player(x,y+room_height+marginv,1)) y-=vspeed}
 } else {
-    coll=instance_place(x,y,OutsideWarp)
-    if (coll) {
-        with (coll) {
-            if (warpCoord[0]==noone && warpCoord[1]==noone && roomTo=room) {
-                //warp isn't set up correctly
-                instance_destroy()
-            } else if (roomTo!=room) {
-                //warp!
-                input_clear()
-                if (autosave) autosave_asap()
-                if (warpCoord[0]==noone && warpCoord[1]==noone) {
-                    warp_to(roomTo)
-                } else {
-                    warp_to(roomTo,warpCoord[0],warpCoord[1])
+    if (hspeed>0 && x>room_width)
+    or (vspeed>0 && y>room_height)
+    or (hspeed<0 && x<0)
+    or (vspeed<0 && y<0) {
+        coll=instance_place(x,y,SectionWarp)
+        if (coll) {
+            with (coll) {
+                global.sectionwarp=true
+                global.warpfromx=x
+                global.warpfromy=y
+                room_goto(roomTo)
+            }
+        } else {
+            coll=instance_place(x,y,OutsideWarp)
+            if (coll) {
+                with (coll) {
+                    if (warpCoord[0]==noone && warpCoord[1]==noone && roomTo=room) {
+                        //warp isn't set up correctly
+                        instance_destroy()
+                    } else if (roomTo!=room) {
+                        //warp!
+                        input_clear()
+                        if (autosave) autosave_asap()
+                        if (warpCoord[0]==noone && warpCoord[1]==noone) {
+                            warp_to(roomTo)
+                        } else {
+                            warp_to(roomTo,warpCoord[0],warpCoord[1])
+                        }
+                        global.warp_id=warpid
+                    }
                 }
-                global.warp_id=warpid
+            } else {
+                //death.
+                if (global.die_outside_room || instance_place(x,y,DieOutside)) kill_player()
             }
         }
-    } else {
-        //death.
-        if (global.die_outside_room || instance_place(x,y,DieOutside)) kill_player()
     }
 }
 #define Other_4
