@@ -129,6 +129,7 @@
 	|sprUnsolid
 	|sprDemoBlock
 	|sprWarp
+	|sprSectionWarp
 	|sprWarpTransparent
 	|sprDynamicPlatform
 	|sprUpPlatform
