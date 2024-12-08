@@ -351,6 +351,7 @@
 	|PatBall
 	|AlignIndicator
 	|InfiniteJump
+	|ExampleNpc
 +Tools
 	+Shaders
 		|DepthHueShift
@@ -488,6 +489,7 @@
 	|PropBlood
 	|Fader
 	|SoundEvent
+	|DialogEngine
 |PlayerStart
 |Block
 |Platform

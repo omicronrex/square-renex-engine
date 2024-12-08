@@ -24,6 +24,7 @@ add_string("signpost","Poggers")
 add_string("hitcount","Hits taken: ")
 add_string("screenshot","Screenshot saved")
 add_string("item save","Save to collect this item.")
+add_string("presstotalk"," to Talk")
 
 //menus
 add_string("menuback","Back")

@@ -9,4 +9,6 @@ with (Player) {
     savedata("beamstate",beamstate)
 }
 
+savedata("dialog",de_save())
+
 //add your custom save code here

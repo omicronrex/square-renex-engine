@@ -319,3 +319,15 @@ mouse_room_x
 mouse_room_y
 check_engine_parenting
 correct_player_mask
+dialog_example
+textbox_default
+de_begin
+de_dialog
+de_choice
+de_save
+de_load
+de_runonce
+de_end
+de_active
+de_documentation
+de_settings

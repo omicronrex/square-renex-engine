@@ -9,4 +9,6 @@ with (Player) {
     beamstate=savedata("beamstate")
 }
 
+de_load(savedata("dialog"))
+
 //add your custom load code here

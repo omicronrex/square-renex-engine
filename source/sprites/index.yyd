@@ -416,3 +416,7 @@ sprReverserOff
 sprJumpManyTimes
 sprSoundEvent
 sprTrap
+sprPlayerPortrait
+sprNpcPortrait
+
+sprNpc

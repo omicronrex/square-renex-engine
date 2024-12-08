@@ -303,3 +303,17 @@
 	|shader_tint
 	|shader_rainbow
 	|shader_snow
++dialog
+	+dialog engine
+		|de_begin
+		|de_dialog
+		|de_choice
+		|de_runonce
+		|de_end
+		|de_save
+		|de_load
+		|de_active
+	|de_settings
+	|de_documentation
+	|textbox_default
+	|dialog_example

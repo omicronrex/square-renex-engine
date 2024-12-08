@@ -433,3 +433,7 @@
 	|sprAvoidanceBulletMedium
 	|sprMoonBullet
 	|sprMikuLeek
++Dialog
+	|sprPlayerPortrait
+	|sprNpcPortrait
+	|sprNpc
