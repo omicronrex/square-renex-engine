@@ -1,7 +1,0 @@
-sprite=sprSpikeLeftTrap
-visible=1
-solid=0
-persistent=0
-depth=1001
-parent=Trap
-mask=
