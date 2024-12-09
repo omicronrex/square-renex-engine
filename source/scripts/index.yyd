@@ -331,5 +331,7 @@ de_end
 de_active
 de_documentation
 de_settings
+create_collision_groups
+create_groups_recurse
 custom_music_effects
 mfx_add
