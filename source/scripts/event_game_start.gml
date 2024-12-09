@@ -73,6 +73,7 @@ global.viewangle=0
 global.pause=false
 global.music=""
 global.music_instance=noone
+global.death_music_id=noone
 
 global.perform_autosave=false
 global.room_started=false

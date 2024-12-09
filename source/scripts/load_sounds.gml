@@ -66,4 +66,6 @@ sound_add_directory_ext(avoid_dir,".mod",1,1,"layer2_")
 sound_add_directory_ext(avoid_dir,".s3m",1,1,"layer1_")
 sound_add_directory_ext(avoid_dir,".s3m",1,1,"layer2_")
 
+custom_music_effects()
+
 custom_sound_properties()

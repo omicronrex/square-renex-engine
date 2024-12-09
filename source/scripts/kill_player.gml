@@ -36,9 +36,13 @@ else if (!dead) {
         } else {
             if (global.gameover_music==0) {
                 //jingle option
-                if (global.restarting_music) sound_stop_music()
-                else sound_fade_music(0,0,1)
-                sound_play("m-r-tight")
+                if (global.restarting_music) {
+                    sound_stop(global.music_instance)
+                    global.death_music_id=sound_play(global.death_music)
+                } else {
+                    sound_pause(global.music_instance)
+                    global.death_music_id=sound_play(global.death_music)
+                }
             } else if (global.gameover_music==1) {
                 //fade option
                 sound_fade_music(0,100,1)

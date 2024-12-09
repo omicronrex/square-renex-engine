@@ -39,6 +39,7 @@
 	|custom_traps
 	|custom_language
 	|custom_sound_properties
+	|custom_music_effects
 	|custom_region_activation
 	|custom_window_border
 	|gm82room_jtool_table
@@ -255,6 +256,7 @@
 	|weapon_shootkid
 +sound
 	|load_sounds
+	|mfx_add
 	|sound_play_music
 	|sound_fade_music
 	|sound_play_auto
