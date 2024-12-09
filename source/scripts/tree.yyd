@@ -88,6 +88,7 @@
 		|filename_valid
 		|current_date_filename
 		|make_persistent
+		|create_groups_recurse
 	+input
 		+joysticks
 			|joy_deadzone
@@ -273,6 +274,7 @@
 	|simple_collision
 	|good_bounce
 	|screen_fade
+	|create_collision_groups
 +avoidance/miku
 	|timeline_miku
 	|timeline_miku_front
