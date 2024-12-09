@@ -1,17 +1,23 @@
-renex engine is copyright (c) 2023 renex
+square-renex engine is copyright (c) 2024 renex, Square, multiple contributors
+full list of contributors in readme file
 
-with "it" being renex engine, "you" being, well, you, and "me" being renex
 
-what you CAN do:
+what you SHOULD do:
 
-- you can use it to make closed-source games if you want
-- you can release the source for your game under the same license or stricter
-- you can sell the games you make with it (provided you have an FMOD license)
-- credit is appreciated, but not required <3
+- use it to make closed-source games if you want
+- release source for your game under the same license or stricter if you want
+- sell the games made with it if you want (provided you have an FMODEx license)
+- providing credit is appreciated, but not required
 
-what you CANNOT do:
+
+what you SHOULD NOT do:
 
 - do not claim you made this or any part of it
 - do not sell an unmodified engine or pieces of it
-- do not blame me for issues arising from your use of it
-- do not use the engine to create or promote any cryptocurrency related items
+- do not blame us for issues arising from your use of it
+- do not use it to create or promote any cryptocurrency-related items
+
+
+this source code is provided as is, without any warranty of any kind, and in no
+way shall the authors be liable for any damages or issues of any kind arising
+from the use or misuse of the software.

@@ -1,13 +1,13 @@
 
-    RENEX ENGINE
-    ============
-    version 1.7
-    August 2023
+    SQUARE-RENEX ENGINE
+    ===================
+    version 1.8
+    December 2024
   
   A modern fork of various Game Maker 8 I Wanna Be The Guy fangame
   engines with hundreds of improvements and new features.
   
-  Made by renex with vast contributions from
+  Made by renex and square with vast contributions from
   the following people at the time of release:
 
 
@@ -16,7 +16,6 @@
     Jopagu
     Plasma
     roaming97
-    Square
     Starz0r
     V
     Verve
@@ -75,6 +74,21 @@
   ideas through me since we met in 2012, and my good friend Floogle, who drives
   me to complete great things. Great times were had and will continue to be.
   
+
+--------------------------------------------------------------------------------
+
+  squareddendum
+  -------------
+
+  damn i added some like 3 lines of code and now apparently i'm part of the
+  engine? crazy how that works out
+  
+  on a more real note, i'm very grateful for renex for making such a fantastic
+  engine, and i'm proud to be able to contribute to it as much as i did
+
+  i hope that you all can make and continue making good use of it in the
+  future too
+
 
 --------------------------------------------------------------------------------
 

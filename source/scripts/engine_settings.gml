@@ -1,21 +1,21 @@
 /*
 
-    RENEX ENGINE
-    ============
-    version 1.7.0
-    July 2023
+    SQUARE-RENEX ENGINE
+    ===================
+    version 1.8.0
+    Dec 2024
 
   A modern fork of various Game Maker 8 I Wanna Be The Guy fangame
   engines with hundreds of improvements and new features.
 
-  Made by renex with vast contributions from
+  Made by renex and square with vast contributions from
   the following people at the time of release:
 
-  ---------------------------------------
-  \  Floogle  Starz0r  Verve  Duncan  V \
-  \  Jopagu  Plasma  Square  roaming97  \
-  \  Various other fangame developers   \
-  ---------------------------------------
+  -------------------------------
+  \   Floogle  Verve  Starz0r   \
+  \  Duncan  V  Jopagu  Plasma  \
+  \   Various other developers  \
+  -------------------------------
 
 */
 
@@ -23,7 +23,7 @@
 global.release_mode=false
 
 //game properties
-    global.game_title="renex engine"
+    global.game_title="square-renex engine"
     //intended room speed
     //note: player always runs at 50hz! look in player step for an explanation
     global.game_speed=50
@@ -36,7 +36,7 @@ global.release_mode=false
     global.hub_room=rmHub
     //password for encrypting saves
     //if you don't want a password, use "" for the save files to be unencrypted dsmaps
-    global.encrypt_save_password="renex"
+    global.encrypt_save_password="squenex"
     //save game to appdata instead of a /save folder
     global.use_appdata=false
     //data folder location (make sure to include the data folder with your exe!)
