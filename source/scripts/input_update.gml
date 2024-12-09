@@ -4,8 +4,8 @@ keyboard=false
 
 //check keyboard
 if (global.infocus) for (i=0;i<vii_sizeof;i+=1) {
+    vii_key[i]=keyboard_check(vii_code[i])
     if (!global.input_cleared) {
-        vii_key[i]=keyboard_check(vii_code[i])
         vii_press[i]=keyboard_check_pressed(vii_code[i])
         vii_release[i]=keyboard_check_released(vii_code[i])
     }
@@ -28,7 +28,7 @@ for (i=0;i<vii_sizeof;i+=1) {
         if (vii_key[i]) vii_prev[i]=min(0,vii_prev[i]+1)
         else vii_prev[i]=1
     }
-}
+}    
 
 //process joysticks added or removed
 joysfound=joystick_found()
