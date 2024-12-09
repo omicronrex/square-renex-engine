@@ -163,34 +163,22 @@ if (sel==-1) {
     draw_sprite_ext(sprite,floor(image_index),xcursor,ycursor,1,1,angle,$ffffff,1)
 }
 
-if global.display_clock_time {
-    var hours,mins,secs;
+var batt_info,batt_status;
 
-    hours=current_hour
-    if hours<10 hours=string("0"+string(hours))
-    else hours=string(hours)
-
-    mins=current_minute
-    if mins<10 mins=string("0"+string(mins))
-    else mins=string(mins)
-
-    secs=current_second
-    if secs<10 secs=string("0"+string(secs))
-    else secs=string(secs)
-
-    draw_set_valign(2)
-        draw_text(40,global.height-36,
-            lang("deaths")+": "+string(savedata("deaths"))+"#"+
-            lang("time")+": "+format_time(savedata("time"))+
-            "#Clock Time: "+hours+":"+mins+":"+secs
-        )
-    draw_set_valign(0)
-} else {
-    draw_set_valign(2)
-        draw_text(40,global.height-36,
-            lang("deaths")+": "+string(savedata("deaths"))+"#"+
-            lang("time")+": "+format_time(savedata("time"))
-        )
-    draw_set_valign(0)
+batt_info=""
+batt_status=get_battery_status()
+if (batt_status) {
+    batt_info=lang("battery")+string(get_battery_level())
+    if (batt_status==2) batt_info+="("+lang("battery charge")+")"
 }
+
+draw_set_valign(2)
+    draw_text(40,global.height-36,
+        lang("deaths")+": "+string(savedata("deaths"))+"#"+
+        lang("time")+": "+format_time(savedata("time"))+"#"+
+        lang("systime")+": "+date_time_string(date_current_time())+"#"+
+        batt_info
+    )
+draw_set_valign(0)
+
 draw_set_color($ffffff)

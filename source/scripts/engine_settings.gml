@@ -53,8 +53,6 @@ global.release_mode=false
     //disable the global settings repository
     //use this when you don't want the engine to remember the last game's options
     global.disable_settings_repo=false
-    //displays the system clock time in the pause menu
-    global.display_clock_time=true
 
 
 //difficulties

@@ -16,6 +16,9 @@ add_string("copy settings","Would you like to copy your preferences#from a previ
 add_string("copy settings 2","[%] and [%] to select - [%] to confirm")
 
 //ingame text
+add_string("systime","Realtime")
+add_string("battery","Battery")
+add_string("battery charge","Charging")
 add_string("warptohub","UP to return")
 add_string("pausemenu","PAUSE")
 add_string("pauseoptions","Press [%] for options")
