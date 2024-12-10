@@ -115,6 +115,14 @@ if (trigger_type=="hard") {
         move_to_xy[0]=other.move_to_xy[0]
         move_to_xy[1]=other.move_to_xy[1]
         move_relative=other.move_relative
+                
+        move_to_xy_grav[0]=other.move_to_xy_grav[0]
+        move_to_xy_grav[1]=other.move_to_xy_grav[1]
+        move_grav=other.move_grav
+        
+        move_spd=other.move_spd
+        
+        trg=other.trg
     }
 }
 #define Other_8
