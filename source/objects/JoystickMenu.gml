@@ -10,7 +10,7 @@ sel=vii_sizeof
 xdraw=120
 ydraw=80
 xsep=560
-ysep=32
+ysep=24
 
 ycursor=0
 
@@ -172,7 +172,7 @@ applies_to=self
 draw_set_color(global.text_color)
 
 draw_set_halign(1)
-draw_set_font(fntFileBig)
+draw_set_font(fntOptions)
 if (joycount==0) {
     draw_text(400,64,"- "+lang("no bitches?")+" -")
 } else if (joy==-1) {

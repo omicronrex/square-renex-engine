@@ -9,7 +9,7 @@ sel=0
 xdraw=global.width/2-276
 ydraw=132
 xsep=550
-ysep=32
+ysep=24
 
 numoptions=ds_list_size(global.optlist)
 for (i=0;i<numoptions;i+=1) {
@@ -64,7 +64,7 @@ applies_to=self
 draw_set_color(global.text_color)
 
 draw_set_halign(1)
-draw_set_font(fntFileBig)
+draw_set_font(fntOptions)
 draw_text(global.width/2,64,lang("optionsmenu"))
 
 for (i=0;i<numoptions;i+=1) {
