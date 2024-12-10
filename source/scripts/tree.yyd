@@ -175,6 +175,7 @@
 	|construct
 	|trigger_broadcast
 	|update_triggers
+	|addtrigger_vars
 	|draw_window_caption
 	|set_game_speed
 	|check_engine_parenting
@@ -277,6 +278,7 @@
 	|good_bounce
 	|screen_fade
 	|create_collision_groups
+	|example_trap_script
 +avoidance/miku
 	|timeline_miku
 	|timeline_miku_front

@@ -51,6 +51,11 @@ move_to_xy_grav[0]=noone
 move_to_xy_grav[1]=noone
 move_grav=0
 
+execute_code=""
+execute_code_timer=0
+execute_code_t=0
+executed=0
+
 trg=0
 
 variables_defined=true
@@ -75,6 +80,13 @@ if (scaling) {
 
 if (rotating) {
     image_angle+=rotate
+}
+
+if (execute_code!="") {
+    if (execute_code_timer==0) {
+        if (!executed) {executed=1 execute_string(execute_code)}
+    } else if (execute_code_t mod execute_code_timer==0) execute_string(execute_code)
+    execute_code_t+=1
 }
 
 if (move_to_xy[0]!=noone && move_to_xy[1]!=noone && move_spd!=0 && trg) {
@@ -193,6 +205,8 @@ applies_to=self
     //field move_easing: enum("EaseLinear","EaseInSine","EaseOutSine","EaseInOutSine","EaseInQuad","EaseOutQuad","EaseInOutQuad","EaseInCubic","EaseOutCubic","EaseInOutCubic","EaseInQuart","EaseOutQuart","EaseInOutQuart","EaseInQuint","EaseOutQuint","EaseInOutQuint","EaseInCirc","EaseOutCirc","EaseInOutCirc","EaseInBack","EaseOutBack","EaseInOutBack")
 //field move_to_xy_grav: xy
     //field move_grav: number
+//field execute_code: string
+    //field execute_code_timer: number - (0=once, 1=every frame, 2=every 2 frames, etc)
 //field no_destroy_outside: false
 //field trigger_on_create: false
 //field trap_redir_index: number

@@ -7,6 +7,7 @@ applies_to=self
 event_inherited()
 instance=noone
 trigger_type="soft"
+retrigger=0
 #define Step_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -33,6 +34,8 @@ applies_to=self
 */
 /*desc
 AddTrigger will turn any object into a trap.
+It also lets traps move more than once with the 'retrigger' field.
+However, you must place Triggered objects on top of the AddTrigger itself if you use that.
 
 If you don't supply an instance, it will look for the first one underneath.
 
@@ -42,6 +45,7 @@ instead of moving by itself.
 
 //field instance: instance
 //field trigger_type: enum("soft","hard") - default: soft
+//field retrigger: false
 
 event_inherited()
 
@@ -59,72 +63,7 @@ if (!instance) {
 }
 y=ystart
 
-if (trigger_type=="hard") {
-    x=instance.x
-    y=instance.y
-    sprite_index=instance.sprite_index
-    image_speed=instance.image_speed
-    image_index=instance.image_index
-    image_angle=instance.image_angle
-    mask_index=instance.mask_index
-    persistent=instance.persistent
-    depth=instance.depth
-    solid=instance.solid
-    x=instance.x
-    y=instance.y
-    xprevious=instance.xprevious
-    yprevious=instance.yprevious
-    xstart=instance.xstart
-    ystart=instance.ystart
-    hspeed=instance.hspeed
-    vspeed=instance.vspeed
-    direction=instance.direction
-    speed=instance.speed
-    friction=instance.friction
-    gravity=instance.gravity
-    gravity_direction=instance.gravity_direction
-} else {
-    with (instance) {
-        dir=other.dir
-        spd=other.spd
-        hsp=other.hsp
-        vsp=other.vsp
-        path=other.path
-        path_endaction=other.path_endaction
-        path_speed=other.path_speed
-        path_absolute=other.path_absolute
-        path_scaling=other.path_scaling
-        sound=other.sound
-        
-        scaleh=other.scaleh
-        scalev=other.scalev
-        scaling=other.scaling
-        
-        rotate=other.rotate
-        rotating=other.rotating
-        
-        no_destroy_outside=other.no_destroy_outside
-        trap_redir_index=other.trap_redir_index
-        trap_stop_index=other.trap_stop_index
-        
-        trigger_on_create=other.trigger_on_create
-        
-        grav=other.grav
-        grav_dir=other.grav_dir
-        
-        move_to_xy[0]=other.move_to_xy[0]
-        move_to_xy[1]=other.move_to_xy[1]
-        move_relative=other.move_relative
-                
-        move_to_xy_grav[0]=other.move_to_xy_grav[0]
-        move_to_xy_grav[1]=other.move_to_xy_grav[1]
-        move_grav=other.move_grav
-        
-        move_spd=other.move_spd
-        
-        trg=other.trg
-    }
-}
+addtrigger_vars()
 #define Other_8
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -146,11 +85,13 @@ if (!instance_exists(instance)) {
     exit
 }
 
-sprite_index=instance.sprite_index
-image_speed=instance.image_speed
-image_index=instance.image_index
-mask_index=instance.mask_index
-persistent=instance.persistent
+if (!retrigger) {
+    sprite_index=instance.sprite_index
+    image_speed=instance.image_speed
+    image_index=instance.image_index
+    mask_index=instance.mask_index
+    persistent=instance.persistent
+}
 
 if (trigger_type=="hard") {
     instance.image_angle=image_angle
@@ -178,5 +119,6 @@ action_id=603
 applies_to=self
 */
 if (trigger_type=="soft") {
+    if (retrigger) addtrigger_vars()
     with (instance) event_perform_object(Gizmo,ev_trigger,tr_traptriggered)
 } else event_inherited()
