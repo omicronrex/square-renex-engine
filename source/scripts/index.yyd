@@ -335,5 +335,6 @@ create_collision_groups
 create_groups_recurse
 custom_music_effects
 mfx_add
+opt_sound_mode
 addtrigger_vars
 example_trap_script

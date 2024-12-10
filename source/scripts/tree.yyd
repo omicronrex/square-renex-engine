@@ -5,6 +5,7 @@
 		|opt_template
 		|opt_music_volume
 		|opt_sound_volume
+		|opt_sound_mode
 		|opt_screen_mode
 		|opt_screen_scale
 		|opt_fullscreen_filter

@@ -12,6 +12,8 @@ settings("anim",1)
 settings("valign",1)
 settings("shakeamount",1)
 
+settings("stereomode",true)
+
 settings("screenscale",1)
 
 settings("caption visible",1)
