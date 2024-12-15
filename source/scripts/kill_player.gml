@@ -37,10 +37,14 @@ else if (!dead) {
             if (global.gameover_music==0) {
                 //jingle option
                 if (global.restarting_music) {
-                    sound_stop(global.music_instance)
+                    if (instance_exists(MusicSync)) instance_destroy_id(MusicSync)
+                    else sound_stop(global.music_instance)
+
                     global.death_music_id=sound_play(global.death_music)
                 } else {
-                    sound_pause(global.music_instance)
+                    if (instance_exists(MusicSync)) instance_destroy_id(MusicSync)
+                    else sound_pause(global.music_instance)
+
                     global.death_music_id=sound_play(global.death_music)
                 }
             } else if (global.gameover_music==1) {

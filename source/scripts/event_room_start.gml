@@ -42,7 +42,7 @@ window_set_caption(room_caption)
 if (sound_isplaying(global.death_music)) {
     sound_stop(global.death_music_id)
 }
-sound_resume(global.music_instance)
+if global.music_instance!=noone sound_resume(global.music_instance)
 
 caption_opacity=1
 
