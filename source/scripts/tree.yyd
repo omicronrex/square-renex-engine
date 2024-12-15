@@ -140,18 +140,6 @@
 	+misc lists
 		|list_nonstick
 		|list_obstructions
-	+world events
-		|event_game_start
-		|event_room_start
-		|event_world_earlystep
-		|event_world_step
-		|event_world_endstep
-		|event_world_drawend
-		|event_debug_gui
-		|event_draw_gui
-		|event_room_end
-		|event_game_end
-		|event_camera_update
 	|add_difficulty
 	|add_gizmo
 	|update_caption_deathtime
@@ -180,6 +168,18 @@
 	|draw_window_caption
 	|set_game_speed
 	|check_engine_parenting
++world events
+	|event_game_start
+	|event_room_start
+	|event_world_earlystep
+	|event_world_step
+	|event_world_endstep
+	|event_world_drawend
+	|event_debug_gui
+	|event_draw_gui
+	|event_room_end
+	|event_game_end
+	|event_camera_update
 +player
 	|player_jump
 	|player_capjump
