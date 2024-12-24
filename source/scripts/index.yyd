@@ -338,3 +338,5 @@ mfx_add
 opt_sound_mode
 addtrigger_vars
 example_trap_script
+camera_smooth_rate
+camera_get_smooth_rate

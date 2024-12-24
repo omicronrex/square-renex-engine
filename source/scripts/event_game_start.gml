@@ -132,8 +132,8 @@ global.difficulty_default=0
 engine_settings()
 
 //i'm not gonna just LET you do that
-if (global.smoothing_rate<1) global.smoothing_rate=1
-global.smoothing_rate=round(global.smoothing_rate)
+if (global.default_smoothing_rate<1) global.default_smoothing_rate=1
+global.default_smoothing_rate=round(global.default_smoothing_rate)
 
 if (global.num_difficulties==1) {
     //only one difficulty, copy it to the single difficulty used

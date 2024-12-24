@@ -9,6 +9,7 @@ screen_height=global.default_camera_h
 zoom_factor=global.default_camera_zoom
 following=global.default_camera_follow
 smooth=global.default_camera_smoothing
+smooth_rate=global.default_smoothing_rate
 #define Other_4
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -28,6 +29,7 @@ Otherwise, it is not necessary to put a camera in every room.
 //field zoom_factor: number
 //field following: instance
 //field smooth: bool
+//field smooth_rate: number
 
 camera_w=screen_width
 camera_h=screen_height
@@ -35,3 +37,7 @@ camera_z=zoom_factor
 camera_f=following
 camera_s=smooth
 camera_a=image_angle
+
+//yeah i'm not letting you do that here either
+if (smooth_rate<1) smooth_rate=1
+camera_sr=round(smooth_rate)

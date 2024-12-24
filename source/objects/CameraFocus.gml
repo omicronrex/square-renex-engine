@@ -46,7 +46,6 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-event_inherited()
 /*desc
 Makes the camera focus on the center of this object.
 You can also set a specific x,y coordinate for it to focus on.
@@ -55,6 +54,7 @@ However, you are responsible for setting the 'following' variable off if it acti
 */
 //field activate_on_create: false
 //field focuscoord: xy
+event_inherited()
 
 if (activate_on_create || instance_place(x,y,Player)) {
     alarm[0]=2

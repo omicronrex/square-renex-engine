@@ -230,6 +230,7 @@
 		|camera_zoom
 		|camera_angle
 		|camera_smooth
+		|camera_smooth_rate
 		|camera_set
 		|camera_borders
 		|camera_set_gridsize
@@ -240,6 +241,7 @@
 		|camera_get_y
 		|camera_get_zoom
 		|camera_get_smooth
+		|camera_get_smooth_rate
 		|camera_get_borders
 	|camera_shake
 	|camera_apply

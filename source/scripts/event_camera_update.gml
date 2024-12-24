@@ -12,7 +12,7 @@ if (is_ingame() && !global.pause && !global.disable_camera) {
         }
     }
 
-    s_rate=global.smoothing_rate
+    s_rate=camera_sr
 
     //calculate and collide camera boundaries
     if (camera_s && camera_initialised) {

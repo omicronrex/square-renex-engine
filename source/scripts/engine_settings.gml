@@ -257,7 +257,7 @@ global.release_mode=false
     global.default_camera_smoothing=true
     //frames to reach target destination if camera smoothing is enabled
     //higher number = camera moves slower
-    global.smoothing_rate=5
+    global.default_smoothing_rate=5
     //deactivate instances outside of the view
     global.instance_deactivation=true
     //how many screens to keep active, with 20 pixels of margin

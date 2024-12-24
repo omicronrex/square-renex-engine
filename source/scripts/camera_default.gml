@@ -9,6 +9,7 @@ with (World) {
     camera_f=global.default_camera_follow
     camera_z=1.0
     camera_s=global.default_camera_smoothing
+    camera_sr=global.default_smoothing_rate
     camera_a=0
 
     with (CameraOverride) {
@@ -18,6 +19,7 @@ with (World) {
         other.camera_z=camera_z
         other.camera_s=camera_s
         other.camera_a=camera_a
+        other.camera_sr=camera_sr
     }
 
     if (instance_exists(camera_f)) {
