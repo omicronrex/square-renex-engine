@@ -25,7 +25,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-///this is delayed to prevent a bug with istance list reordering
+///this is delayed to prevent a bug with instance list reordering
 global.room_started=true
 update_activation()
 #define Alarm_2
