@@ -70,6 +70,8 @@ if (trigger_type=="hard") {
         execute_code_t=0
         executed=0
         
+        trap_delay=other.trap_delay
+        
         trg=other.trg
     }
 }
