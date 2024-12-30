@@ -56,6 +56,8 @@ execute_code_timer=0
 execute_code_t=0
 executed=0
 
+trap_delay=0
+
 trg=0
 
 variables_defined=true
@@ -66,6 +68,11 @@ action_id=603
 applies_to=self
 */
 if (!trg) exit
+else if (trap_delay) {
+    trap_delay-=1
+    if (trap_delay<=0) event_trigger(tr_traptriggered)
+    exit
+}
 
 if (scaling) {
     sw=sprite_get_width(sprite_index)
@@ -207,10 +214,12 @@ applies_to=self
     //field move_grav: number
 //field execute_code: string
     //field execute_code_timer: number - (0=once, 1=every frame, 2=every 2 frames, etc)
-//field no_destroy_outside: false
-//field trigger_on_create: false
-//field trap_redir_index: number
-//field trap_stop_index: number
+//field misc_control: false
+    //field no_destroy_outside: false
+    //field trigger_on_create: false
+    //field trap_delay: number
+    //field trap_redir_index: number
+    //field trap_stop_index: number
 
 if (!variable_local_exists("variables_defined")) {
     show_error("Error in instance "+string(id)+" of object "+object_get_name(object_index)+": Gizmo parent variables are not defined. Please use event_inherited()/Call Event on your object's Create event to correctly set up "+object_get_name(object_get_parent(object_index))+" inheritance.",1)
@@ -243,6 +252,9 @@ applies_to=self
 ///get movin'
 
 trg=1
+
+if (trap_delay>0) exit
+
 move_t=0
 
 if (sound!="") sound_play_auto(sound)
