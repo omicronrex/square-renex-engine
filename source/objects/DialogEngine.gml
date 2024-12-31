@@ -24,7 +24,7 @@ textbox_drawer=textbox_default
 lock_controls()
 
 key_advance=false
-key_lock=true
+//key_lock=false
 die=false
 
 de_settings()
@@ -104,9 +104,11 @@ if (donescrolling && !option_count) waiting=true else waiting=false
 //control
 visible=1
 
-if (key_lock) {
+/*if (key_lock) {
     if (script_execute(de_input_advance,vi_released)) key_lock=false
-} else key_advance=script_execute(de_input_advance,vi_pressed)
+} else*/
+
+key_advance=script_execute(de_input_advance,vi_pressed)
 
 if (die) instance_destroy()
 #define Other_5
