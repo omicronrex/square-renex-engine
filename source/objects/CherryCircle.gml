@@ -9,6 +9,8 @@ cycle_length=4
 motion_type=1
 radius=80
 
+initial_angle=0
+
 time=0
 #define Destroy_0
 /*"/*'/**//* YYD ACTION
@@ -56,8 +58,8 @@ for (i=0;i<num_cherries;i+=1) {
         }break
     }
 
-    o[i].x=x+lengthdir_x(r,a)
-    o[i].y=y+lengthdir_y(r,a)
+    o[i].x=x+lengthdir_x(r,a+initial_angle)
+    o[i].y=y+lengthdir_y(r,a+initial_angle)
 }
 
 time+=dt/(cycle_length*50)
@@ -72,6 +74,7 @@ applies_to=self
 //field motion_type: enum("circle","figure8","stutter","chaotic")
 //field radius: radius
 //field sprite_index: sprite
+//field initial_angle: angle
 
 /*preview
     if (!FieldDefined("motion_type")) exit
@@ -103,7 +106,7 @@ applies_to=self
             }break
         }
 
-        draw_sprite(sprite_index,0,x+lengthdir_x(r,a),y+lengthdir_y(r,a))
+        draw_sprite(sprite_index,0,x+lengthdir_x(r,a+initial_angle),y+lengthdir_y(r,a+initial_angle))
     }
 */
 
