@@ -19,7 +19,7 @@ applies_to=self
 if (instance_place(x,y,Player)) {
     notice=!cutscene
     //this is to prevent things like jumping when you initiate a dialog sequence
-    //only necessary if you use inputs to
+    //only necessary if you use inputs to initiate dialog sequences
     input_disable(de_input_advance)
     if (script_execute(de_input_advance,vi_pressed)) de_begin(dialog_example)
 } else {
