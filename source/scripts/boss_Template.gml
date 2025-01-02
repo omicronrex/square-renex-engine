@@ -13,7 +13,7 @@ if (event_type==ev_create) {
     //set this to 0 to remove the popup subtitle
     make_subtitle=1
     name="Template Boss"
-    subtitle="renex engine" 
+    subtitle="square-renex engine" 
 
     lock_controls()
     sound_stop_music()
