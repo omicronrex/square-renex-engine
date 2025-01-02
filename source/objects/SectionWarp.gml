@@ -11,6 +11,12 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+/*description
+Connects two rooms via wrap-around. Can either connect
+multiple points if they're perfectly lined up,
+or one point if it's not lined up.
+See rmDemo, rmDemo2, and rmClassic2 for examples.
+*/
 //field roomTo: room
 #define Other_10
 /*"/*'/**//* YYD ACTION
