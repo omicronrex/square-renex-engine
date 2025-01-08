@@ -5,11 +5,12 @@ action_id=603
 applies_to=self
 */
 path=noone
-path_action=path_action_reverse
-path_absolute=false
+path_action=path_action_stop
+path_absolute=true
+path_speed=0
 
-snap="none"
-snap_type=noone
+snap="yuuutu"
+snap_type=0
 
 phase=false
 
@@ -73,12 +74,12 @@ applies_to=self
 //field snap: enum("yuuutu","always","top","never")
 //field visible: true
 //field path: path
-//field speed
+//field path_speed: number
 //field path_action: enum(path_action_continue,path_action_restart,path_action_reverse,path_action_stop)
 //field path_absolute: false
 //field phase: false - lets the platform go through blocks
-//field hspeed
-//field vspeed
+//field hspeed: number
+//field vspeed: number
 
 if (snap=="yuuutu") snap_type=0
 if (snap=="always") snap_type=1
@@ -86,7 +87,7 @@ if (snap=="top") snap_type=2
 if (snap=="never") snap_type=3
 
 if (path!=noone) {
-    path_start(path,speed,path_action,path_absolute)
+    path_start(path,path_speed,path_action,path_absolute)
 }
 #define Draw_0
 /*"/*'/**//* YYD ACTION
