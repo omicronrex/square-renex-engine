@@ -57,6 +57,7 @@ if (trigger_type=="hard") {
         move_to_xy[0]=other.move_to_xy[0]
         move_to_xy[1]=other.move_to_xy[1]
         move_time=other.move_time
+        move_easing=other.move_easing
         move_relative=other.move_relative
                 
         move_to_xy_grav[0]=other.move_to_xy_grav[0]
