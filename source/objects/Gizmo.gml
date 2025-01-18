@@ -201,25 +201,26 @@ applies_to=self
     //field scaleh: number
     //field scalev: number
     //field rotate: number
-//field path: path
-    //field path_endaction: enum(path_action_continue,path_action_restart,path_action_reverse,path_action_stop)
-    //field path_absolute: true
-    //field path_scaling: number
-    //field path_speed: number
-//field move_to_xy: xy
-    //field move_spd: number
-    //field move_relative: false
-    //field move_easing: enum("EaseLinear","EaseInSine","EaseOutSine","EaseInOutSine","EaseInQuad","EaseOutQuad","EaseInOutQuad","EaseInCubic","EaseOutCubic","EaseInOutCubic","EaseInQuart","EaseOutQuart","EaseInOutQuart","EaseInQuint","EaseOutQuint","EaseInOutQuint","EaseInCirc","EaseOutCirc","EaseInOutCirc","EaseInBack","EaseOutBack","EaseInOutBack")
-//field move_to_xy_grav: xy
-    //field move_grav: number
-//field execute_code: string
-    //field execute_code_timer: number - (0=once, 1=every frame, 2=every 2 frames, etc)
-//field misc_control: false
+//field advanced_movement: false
+    //field path: path
+        //field path_endaction: enum(path_action_continue,path_action_restart,path_action_reverse,path_action_stop)
+        //field path_absolute: true
+        //field path_scaling: number
+        //field path_speed: number
+    //field move_to_xy: xy
+        //field move_spd: number
+        //field move_relative: false
+        //field move_easing: enum("EaseLinear","EaseInSine","EaseOutSine","EaseInOutSine","EaseInQuad","EaseOutQuad","EaseInOutQuad","EaseInCubic","EaseOutCubic","EaseInOutCubic","EaseInQuart","EaseOutQuart","EaseInOutQuart","EaseInQuint","EaseOutQuint","EaseInOutQuint","EaseInCirc","EaseOutCirc","EaseInOutCirc","EaseInBack","EaseOutBack","EaseInOutBack")
+    //field move_to_xy_grav: xy
+        //field move_grav: number
+//field control: false
     //field no_destroy_outside: false
     //field trigger_on_create: false
     //field trap_delay: number
     //field trap_redir_index: number
     //field trap_stop_index: number
+    //field execute_code: string
+        //field execute_code_timer: number - (0=once, 1=every frame, 2=every 2 frames, etc)
 
 if (!variable_local_exists("variables_defined")) {
     show_error("Error in instance "+string(id)+" of object "+object_get_name(object_index)+": Gizmo parent variables are not defined. Please use event_inherited()/Call Event on your object's Create event to correctly set up "+object_get_name(object_get_parent(object_index))+" inheritance.",1)
