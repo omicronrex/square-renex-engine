@@ -220,7 +220,7 @@ applies_to=self
     //field trap_redir_index: number
     //field trap_stop_index: number
     //field execute_code: string
-        //field execute_code_timer: number - (0=once, 1=every frame, 2=every 2 frames, etc)
+        //field         execute_code_timer: number - (0=once, 1=every frame, 2=every 2 frames, etc)
 
 if (!variable_local_exists("variables_defined")) {
     show_error("Error in instance "+string(id)+" of object "+object_get_name(object_index)+": Gizmo parent variables are not defined. Please use event_inherited()/Call Event on your object's Create event to correctly set up "+object_get_name(object_get_parent(object_index))+" inheritance.",1)

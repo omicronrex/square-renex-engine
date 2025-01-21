@@ -1,3 +1,3 @@
-///example_trap_script(shoot/jump)
-if (argument0) {with (Player) player_shoot()}
-else {with (Player) player_jump()}
+///example_trap_script()
+instance_create_moving(x+random_range(-8,8),y+random_range(-8,8),Cherry,3,random(360))
+sound_play("sndDelfruit")
