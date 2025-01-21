@@ -41,7 +41,7 @@ MiniSpikeDown
 MiniSpikeRight
 MiniSpikeLeft
 MiniSpikeUp
-CherryCircle
+Spinner
 WhiteDotEnable
 WhiteDotDisable
 SpikeDdot
@@ -488,3 +488,4 @@ CopySettings
 DialogEngine
 ExampleNpc
 SectionWarp
+

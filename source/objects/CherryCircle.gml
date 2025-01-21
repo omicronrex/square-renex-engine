@@ -4,6 +4,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+max_num=5
 num_cherries=3
 cycle_length=4
 motion_type=1
@@ -35,7 +36,7 @@ var i,ct,r,a;
 if (cycle_length==0) exit
 
 for (i=0;i<num_cherries;i+=1) {
-    ct=time+i/num_cherries
+    ct=time+i/max_num
     r=radius
     a=ct*360
 
@@ -69,6 +70,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+//field max_num: number
 //field num_cherries: number
 //field cycle_length: number - in seconds
 //field motion_type: enum("circle","figure8","stutter","chaotic")

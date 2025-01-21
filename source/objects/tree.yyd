@@ -67,7 +67,6 @@
 			|CherryRainbow
 		|MegaCherry
 		|CherryBounce
-		|CherryCircle
 	+Special Blocks
 		|ConveyorLeft
 		|ConveyorRight
@@ -158,6 +157,7 @@
 	|KillBlock
 	|Ladder
 	|LadderSide
+	|Spinner
 	|Signpost
 	|Warp
 	|FadeWarp

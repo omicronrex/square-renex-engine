@@ -35,6 +35,8 @@
 	|sprFadeWarp
 	|sprSoundEvent
 	|sprTrap
+	|sprSpinner
+	|sprSpinnerHitbox
 +Player
 	|sprMaskPlayer
 	|sprMaskPlayerFlip

@@ -421,3 +421,5 @@ sprNpcPortrait
 
 sprNpc
 sprSectionWarp
+sprSpinner
+sprSpinnerHitbox
