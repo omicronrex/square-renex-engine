@@ -4,4 +4,6 @@ retrigger=true
 sound="sndBoing"
 movement=true
 hsp=4
+control=true
+trap_stop_index=1
 //gm82 fields end
