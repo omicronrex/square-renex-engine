@@ -1,7 +1,7 @@
 /*
 
-    SQUARE-RENEX ENGINE
-    ===================
+    RENEX² ENGINE
+    =============
     version 1.8.0
     Dec 2024
 
@@ -23,7 +23,7 @@
 global.release_mode=false
 
 //game properties
-    global.game_title="square-renex engine"
+    global.game_title="renex² engine"
     //intended room speed
     //note: player always runs at 50hz! look in player step for an explanation
     global.game_speed=50

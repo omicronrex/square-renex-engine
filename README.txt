@@ -1,6 +1,6 @@
 
-    SQUARE-RENEX ENGINE
-    ===================
+    RENEX² ENGINE
+    =============
     version 1.8
     December 2024
   
@@ -97,7 +97,7 @@
 
   You can find the most recent engine source and updates here:
 
-  - https://github.com/omicronrex/renex-engine
+  - https://github.com/omicronrex/renex2-engine
 
   Feel free to contribute any fixes or new features! I'm also hosting a
   Discord server where you can get help if you run into issues:
