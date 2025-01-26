@@ -16,5 +16,13 @@ if (instance_exists(owner)) {
     vspeed=owner.vspeed
 }
 
-sound_pan(sound,median(-1,(x-(view_xview+view_wview/2))/(view_wview/2),1))
-sound_volume(sound,min(1,1+((view_wview*2/3)-point_distance(x,y,view_xview+view_wview/2,view_yview+view_hview/2))/(view_wview*2/3)))
+if (instance_exists(Player)) {
+    xcenter=Player.x
+    ycenter=Player.y
+} else {
+    xcenter=view_xview+view_wview/2
+    ycenter=view_yview+view_hview/2
+}
+
+sound_pan(sound,median(-1,(x-(xcenter))/view_wview,1))
+sound_volume(sound,min(1,1+((view_wview*2/3)-point_distance(x,y,xcenter,ycenter))/(view_wview*2/3)))
