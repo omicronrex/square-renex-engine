@@ -4,7 +4,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-max_num=5
+max_num=noone
 num=3
 cycle_length=4
 flower_length=4
@@ -99,25 +99,22 @@ applies_to=self
 //credits to voraciousreader for the "flower" motion type + num/max_num distinction
 
 /*preview
+    var i,ct,r,a;
 
-    if (!FieldDefined("motion_type") || !FieldDefined("max_num") || !FieldDefined("num")) {
-        draw_sprite(Sprite("sprSpinner",0),0,x,y)
+    if (!FieldDefined("motion_type")|| !FieldDefined("num")) {
+        draw_sprite(Sprite("sprSpinner"),0,x,y)
         exit
     }
+
+    if (!FieldDefined("max_num")) max_num=num
 
     if (cycle_length==0) time=0
     else time=(current_time/16)/(cycle_length*50)
 
     for (i=0;i<num;i+=1) {
         ct=time+i/max_num
-        r=radius
-        a=ct*360
 
         switch (motion_type) {
-            case "circle": {
-                r=radius
-                a=ct*360
-            }break
             case "figure8": {
                 r=radius*sin(time*pi*4)
                 a=ct*360
@@ -134,18 +131,20 @@ applies_to=self
                 r=radius*(1+sin(time*pi*2*flower_length))/2
                 a=ct*360
             }break
+            default: {
+                r=radius
+                a=ct*360
+            }break
         }
-        draw_sprite(Sprite("sprCherry"),0,x+lengthdir_x(r,a+initial_angle),y+lengthdir_y(r,a+initial_angle))
+
+        if (!FieldDefined("sprite")) draw_sprite(Sprite("sprCherry"),0,x+lengthdir_x(r,a+initial_angle),y+lengthdir_y(r,a+initial_angle))
+        else draw_sprite(Sprite(Field("sprite"),0),0,x+lengthdir_x(r,a+initial_angle),y+lengthdir_y(r,a+initial_angle))
     }
     if Field("cycle_length")>0 draw_sprite_ext(Sprite("sprSpinner"),0,x,y,1,1,a+initial_angle,c_white,1)
     else draw_sprite_ext(Sprite("sprSpinner"),0,x,y,1,-1,a+initial_angle,c_white,1)
 */
 
-/*
-        if !FieldDefined("sprite") draw_sprite(Sprite("sprCherry"),0,x+lengthdir_x(r,a+initial_angle),y+lengthdir_y(r,a+initial_angle))
-        else draw_sprite(Sprite(Field("sprite")),0,x+lengthdir_x(r,a+initial_angle),y+lengthdir_y(r,a+initial_angle))
-
-*/
+if (max_num==noone) max_num=num
 
 var i;
 
@@ -153,6 +152,7 @@ for (i=0;i<num;i+=1) {
     o[i]=instance_create(x,y,object)
     o[i].sprite_index=sprite
     o[i].depth=depth
+    o[i].spinner_signature=true
 }
 
 event_step()
