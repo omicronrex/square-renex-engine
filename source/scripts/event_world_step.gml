@@ -36,7 +36,7 @@ if (music_fade<1) {
 //music slow
 if (slowing) {
     slowfrom-=0.01
-    if (!instance_exists(MusicSync)) sound_kind_pitch(1,slowfrom)
+    if (!instance_exists(MusicSync)) sound_kind_pitch(1,slowfrom*global.slomo)
     else MusicSync.slowing=1
     if (slowfrom<=0) {
         slowing=0
