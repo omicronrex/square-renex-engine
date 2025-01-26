@@ -62,6 +62,8 @@ else if (!dead) {
 
             drop_items()
 
+            vehicle_dismount()
+
             sound_play_auto("sndDeath")
 
             instance_create(x,y,BloodEmitter)
