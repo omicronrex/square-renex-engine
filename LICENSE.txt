@@ -1,4 +1,4 @@
-square-renex engine is copyright (c) 2024 renex, Square, multiple contributors
+renex² engine is copyright (c) 2024 renex, Square, multiple contributors
 full list of contributors in readme file
 
 

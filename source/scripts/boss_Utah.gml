@@ -8,7 +8,7 @@ if (event_type==ev_other && event_number==ev_room_start) {
 if (event_type==ev_create) {
     make_subtitle=1
     name="Utah"
-    subtitle="square-renex engine"
+    subtitle="renex² engine"
     hp=40
 
     sound_play_music("ddpboss",1)
