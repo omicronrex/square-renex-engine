@@ -89,16 +89,28 @@ if (fruit!=noone) {
 
 //vines
 if (vine_left!=noone) {
-    with (WallJumpL) {sprite_index=other.vine_left image_blend=other.blend image_alpha=other.alpha}
+    with (WallJumpL) {
+        if (variable_local_exists("spinner_signature")) continue;
+        sprite_index=other.vine_left image_blend=other.blend image_alpha=other.alpha
+    }
 }
 if (vine_right!=noone) {
-    with (WallJumpR) {sprite_index=other.vine_right image_blend=other.blend image_alpha=other.alpha}
+    with (WallJumpR) {
+        if (variable_local_exists("spinner_signature")) continue;
+        sprite_index=other.vine_right image_blend=other.blend image_alpha=other.alpha
+    }
 }
 
 //grav flippers
 if (grav_flip!=noone) {
-    with (GravFlip) {sprite_index=other.grav_flip image_blend=other.blend image_alpha=other.alpha}
+    with (GravFlip) {
+        if (variable_local_exists("spinner_signature")) continue;
+        sprite_index=other.grav_flip image_blend=other.blend image_alpha=other.alpha
+    }
 }
 if (grav_normal!=noone) {
-    with (GravNormal) {sprite_index=other.grav_normal image_blend=other.blend image_alpha=other.alpha}
+    with (GravNormal) {
+        if (variable_local_exists("spinner_signature")) continue;
+        sprite_index=other.grav_normal image_blend=other.blend image_alpha=other.alpha
+    }
 }
