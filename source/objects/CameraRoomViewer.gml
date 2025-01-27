@@ -34,6 +34,18 @@ if (active) {
     x=view_xview+global.width/2
     y=view_yview+global.height/2
 }
+#define Other_4
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+/*desc
+    Allows the player to see the whole room.
+    You can adjust the speed they move at with the spd variable.
+*/
+
+//field spd: number
 #define Draw_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
