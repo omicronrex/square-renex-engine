@@ -22,7 +22,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-for (i=0;i<num_cherries;i+=1) {
+for (i=0;i<num;i+=1) {
     instance_destroy_id(o[i])
 }
 #define Step_0
@@ -153,6 +153,7 @@ for (i=0;i<num;i+=1) {
     o[i].sprite_index=sprite
     o[i].depth=depth
     o[i].spinner_signature=true
+    o[i].destroy_outside=false //only relevant for cherries
 }
 
 event_step()
