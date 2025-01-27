@@ -140,7 +140,7 @@ applies_to=self
         if (!FieldDefined("sprite")) draw_sprite(Sprite("sprCherry"),0,x+lengthdir_x(r,a+initial_angle),y+lengthdir_y(r,a+initial_angle))
         else draw_sprite(Sprite(Field("sprite"),0),0,x+lengthdir_x(r,a+initial_angle),y+lengthdir_y(r,a+initial_angle))
     }
-    if Field("cycle_length")>0 draw_sprite_ext(Sprite("sprSpinner"),0,x,y,1,1,a+initial_angle,c_white,1)
+    if (Field("cycle_length")>0) draw_sprite_ext(Sprite("sprSpinner"),0,x,y,1,1,a+initial_angle,c_white,1)
     else draw_sprite_ext(Sprite("sprSpinner"),0,x,y,1,-1,a+initial_angle,c_white,1)
 */
 
