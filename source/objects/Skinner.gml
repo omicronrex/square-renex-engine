@@ -17,6 +17,12 @@ fruit = noone
 
 blend = $ffffff
 alpha = 1
+
+vine_left = noone
+vine_right = noone
+
+grav_flip = noone
+grav_normal = noone
 #define Other_4
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -38,6 +44,10 @@ An example is provided in rmExtra.
 //field mini_spike_left: sprite
 //field mini_spike_up: sprite
 //field fruit: sprite
+//field vine_left: sprite
+//field vine_right: sprite
+//field grav_flip: sprite
+//field grav_normal: sprite
 //field blend: color
 //field alpha: number(0,1)
 
@@ -75,4 +85,20 @@ if (fruit!=noone) {
         if (variable_local_exists("spinner_signature")) continue;
         sprite_index=other.fruit image_blend=other.blend image_alpha=other.alpha
     }
+}
+
+//vines
+if (vine_left!=noone) {
+    with (WallJumpL) {sprite_index=other.vine_left image_blend=other.blend image_alpha=other.alpha}
+}
+if (vine_right!=noone) {
+    with (WallJumpR) {sprite_index=other.vine_right image_blend=other.blend image_alpha=other.alpha}
+}
+
+//grav flippers
+if (grav_flip!=noone) {
+    with (GravFlip) {sprite_index=other.grav_flip image_blend=other.blend image_alpha=other.alpha}
+}
+if (grav_normal!=noone) {
+    with (GravNormal) {sprite_index=other.grav_normal image_blend=other.blend image_alpha=other.alpha}
 }
