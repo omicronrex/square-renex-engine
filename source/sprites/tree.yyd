@@ -37,6 +37,7 @@
 	|sprTrap
 	|sprSpinner
 	|sprSpinnerHitbox
+	|sprCameraRoomViewer
 +Player
 	|sprMaskPlayer
 	|sprMaskPlayerFlip
