@@ -217,6 +217,7 @@
 	|TrapStop
 	|TriggerGroup
 	|TrapRedirect
+	|TrapDestroy
 	|AddTrigger
 	|TriggerFree
 	|TriggeredFree

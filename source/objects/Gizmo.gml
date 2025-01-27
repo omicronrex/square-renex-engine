@@ -38,6 +38,7 @@ trigger_on_create=0
 
 trap_redir_index=0
 trap_stop_index=0
+trap_destroy_index=0
 
 move_to_xy[0]=noone
 move_to_xy[1]=noone
@@ -117,7 +118,7 @@ if (move_to_xy_grav[0]!=noone && move_to_xy_grav[1]!=noone && move_grav>0) {
     }
 }
 
-var coll;coll=0
+var coll;coll=noone
 coll=instance_place(x+hspeed,y+vspeed,TrapStop)
 
 if (coll) if (trap_stop_index==coll.index) {
@@ -173,6 +174,10 @@ if (coll) if (trap_redir_index==coll.index) {
         vspeed+=coll.vsp
     }
 }
+
+coll=instance_place(x+hspeed,y+vspeed,TrapDestroy)
+
+if (coll) if (trap_destroy_index==coll.index) instance_destroy()
 #define Other_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -219,6 +224,7 @@ applies_to=self
     //field trap_delay: number
     //field trap_redir_index: number
     //field trap_stop_index: number
+    //field trap_destroy_index: number
     //field execute_code: string
         //field         execute_code_timer: number - (0=once, 1=every frame, 2=every 2 frames, etc)
 
