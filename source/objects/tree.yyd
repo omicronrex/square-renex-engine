@@ -235,10 +235,6 @@
 		|DotkidEnable
 		|DotkidDisable
 		|DotkidKiller
-	+Shootkid
-		|ShootkidEnable
-		|ShootkidDisable
-		|ShootKid
 	+Keypick
 		|KeyDraw
 		|KeyWhite
@@ -269,6 +265,9 @@
 		|HighGravField
 		|LowSpeedField
 		|HighSpeedField
+		|ShootkidEnable
+		|ShootkidDisable
+		|ShootKid
 	+Pastel
 		|PastelSpikeBlack
 		|PastelSpikeBlackU

@@ -264,9 +264,6 @@
 	+Dotkid
 		|sprDotter
 		|sprUndotter
-	+Shootkid
-		|sprShootkidEnabler
-		|sprShootkidDisabler
 	+Keypick
 		|sprKeyWhite
 		|sprKeyRed
@@ -287,6 +284,8 @@
 		|sprStarDoubleJump
 		|sprStarTripleJump
 		|sprNangTJumpParticle
+		|sprShootkidEnabler
+		|sprShootkidDisabler
 	+See the Moon
 		|sprBeamPurple
 		|sprBeamYellow
