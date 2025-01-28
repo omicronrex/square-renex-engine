@@ -5,6 +5,11 @@ var fn,f,p;
 
 global.savesig="save"+string(argument[0])
 
+
+//this changes the appearance of save names on the file menu and game title bar
+global.savename=lang("filegame")+string(argument[0]+1)
+
+
 difficulty=savedata("diff")
 
 if (savedata("saved") && argument_count==1) {

@@ -181,7 +181,7 @@ for (i=0;i<3;i+=1) {
     savedata_select(i,0)
     draw_set_halign(1)
     draw_set_font(fntFileBig)
-    draw_text(x+i*240+64,y+96,lang("filegame")+string(i+1))
+    draw_text(x+i*240+64,y+96,global.savename)
     draw_set_font(fntFileSmall)
 
     if (global.savefile_thumbnails) draw_background_stretched(bgThumbDefault,x+i*240,y,128,96)
@@ -194,7 +194,7 @@ for (i=0;i<3;i+=1) {
         if (state="continue" && select=i) {
             if (!asksel) draw_text(x+i*240+64,y+32+96,">"+lang("filecontinue")+"<#"+lang("fileerase"))
             else draw_text(x+i*240+64,y+32+96,lang("filecontinue")+"#>"+string_repeat("XX",askcount)+string_copy(lang("fileerase"),1+askcount*2,10-askcount*2)+"<")
-        } else draw_text(x+i*240+64,y+48+96,global.name_difficulties[difficulty])
+        } else if (global.num_difficulties>1) draw_text(x+i*240+64,y+48+96,global.name_difficulties[difficulty])
 
         if (global.savefile_thumbnails) {
             if (savedata("room")==global.difficulty_room) {
