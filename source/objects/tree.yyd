@@ -260,7 +260,7 @@
 		|StarSingleJump
 		|StarDoubleJump
 		|StarTripleJump
-		|TripleJumpStar
+		|TripleJumpEffect
 		|LowGravField
 		|HighGravField
 		|LowSpeedField
