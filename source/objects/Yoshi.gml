@@ -89,7 +89,13 @@ if (lost) {
 
         vehicle_dismount()
         passenger.y-=20*vflip
-        passenger.vspeed=vspeed
+        with (passenger) if (object_is_child_of(Player)) {
+            if (vvvvvv) {
+                flip_player()
+                vspeed=maxVspeed*vflip
+                sound_play_auto("sndVLineFlip")
+            } else vspeed=other.vspeed
+        }
         vspeed=0
 
         dead=1

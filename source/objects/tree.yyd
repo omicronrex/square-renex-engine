@@ -292,6 +292,7 @@
 	+Vcoin
 		|VCoinGive
 		|VCoinTake
+		|VLineFlipper
 	+KTG
 		|JumpSwitchBlock
 		|JumpSwitchBlockOff
