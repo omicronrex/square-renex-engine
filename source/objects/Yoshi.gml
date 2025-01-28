@@ -42,10 +42,10 @@ if (lost) {
 
     if (bleeding) {
         bleeding-=1
-        y-=40
+        y-=20+20*vflip
         x+=10*image_xscale
         emit_prop_blood(10*settings("blood"))
-        y+=40
+        y+=20+20*vflip
         x-=10*image_xscale
     }
 
@@ -60,6 +60,8 @@ if (lost) {
     angle=max(-20,angle-0.5)
 } else if (active) {
     //yoshi is being ridden
+
+    gravity=0.4*vflip
 
     hspeed=macro_leftright()*4
     vspeed=min(vspeed,11)
@@ -76,7 +78,14 @@ if (lost) {
     } else sprite_index=sprYoshiStand
 
     if (key_jump(vi_pressed)) {
-        if (instance_place(x,y+1,Block)) vspeed=-11*vflip
+        if (instance_place(x,y+vflip,Block)) {
+            if (passenger.vvvvvv) {
+                vflip=-vflip
+                if (vflip==-1) sound_play_auto("sndVFlip1")
+                else sound_play_auto("sndVFlip2")
+            } else vspeed=-11*vflip
+            passenger.vflip=vflip
+        }
     }
     if (key_jump(vi_released)) {
         if (vspeed*vflip<0) vspeed*=0.45
@@ -100,6 +109,11 @@ if (lost) {
 
         dead=1
         bleeding=10*settings("blood")
+    }
+
+    if (passenger.vvvvvv) {
+        if (vflip== 1 && vspeed!=0) vspeed= 11
+        if (vflip==-1 && vspeed!=0) vspeed=-11
     }
 
     var land,store_y,was_on_slope,is_going_into_slope,grav_step;
@@ -224,6 +238,12 @@ if (active) {
 
     passenger.vspeed=vspeed
 
+    with (passenger) if (vvvvvv) {
+        flip_player()
+        vspeed=maxVspeed*vflip
+        sound_play_auto("sndVLineFlip")
+    }
+
     lost=1
     vspeed=-8*vflip
     gravity=0.2*vflip
@@ -246,7 +266,9 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-draw_sprite_ext(sprite_index,floor(image_index),x,y,image_xscale,image_yscale,angle,image_blend,image_alpha)
+if (active) if (passenger.vvvvvv) d3d_set_fog(1,$d9a401,0,0)
+draw_sprite_ext(sprite_index,floor(image_index),x,y-16+16*vflip,image_xscale,vflip,angle,image_blend,image_alpha)
+if (active) if (passenger.vvvvvv) d3d_set_fog(0,0,0,0)
 #define Trigger_Vehicle Mount
 /*"/*'/**//* YYD ACTION
 lib_id=1
