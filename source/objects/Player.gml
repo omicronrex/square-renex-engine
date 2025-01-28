@@ -156,7 +156,7 @@ applies_to=self
 updating=0
 if (!frozen) {
     //add how much time has passed since last frame
-    stepcount+=dt
+    stepcount+=50/global.game_speed*global.slomo
     //is another frame in order?
     if (roundto(stepcount,0.00001)>=1) {
         updating=true
