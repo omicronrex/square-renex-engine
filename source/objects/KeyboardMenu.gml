@@ -110,7 +110,7 @@ for (i=0;i<=vii_sizeof;i+=1) {
     draw_text(xdraw+xsep,ydraw+i*ysep+32,keytext[i])
 }
 
-draw_sprite(sprPlayerIdle,floor(image_index),xdraw-20,ycursor)
+draw_sprite(sprite_index,floor(image_index),xdraw-20,ycursor)
 
 //button info
 draw_set_font(fntFileSmall)
