@@ -339,6 +339,8 @@
 		|GravDownBlock
 		|DownWater
 		|UpWater
+		|ShootRefresherL
+		|ShootRefresherR
 	|CoinFlip
 	|CoinNormal
 	|ClockOn
@@ -347,8 +349,6 @@
 	|ReverserOff
 	|ToggleBlockOn
 	|ToggleBlockOff
-	|ShootRefresherL
-	|ShootRefresherR
 	|Teleporter
 	|PatBall
 	|AlignIndicator
