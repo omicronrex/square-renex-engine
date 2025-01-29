@@ -45,6 +45,7 @@ global.release_mode=false
     global.savefile_thumbnails=true
     //user interface text color
     global.text_color=$ffffff
+    global.filemenu_color=$ffffff
     //enable test mode in exe builds
     //do not forget to disable this when publishing your game
     global.always_test_mode=false

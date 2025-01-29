@@ -40,13 +40,14 @@ if (key_right(vi_pressed)) {
 
 if (key_jump(vi_pressed)) {
     sound_play("sndDJump")
-    if (sel) {
+    if (sel==0) {
         setmap_read(global.setrepo)
         convert_settings(settings("settings version"),re_setversion)
         if (global.uses_default_keybinds) {
             vii_sizeof=0
             custom_keys()
         }
+        settings("volcheck",true)
         update_fullscreen()
     }
     visible=0

@@ -175,7 +175,7 @@ draw_set_color(global.text_color)
 draw_set_halign(1)
 draw_set_font(fntFileBig)
 draw_text(global.width/2,64,lang("filemenu"))
-draw_set_color($ffffff)
+draw_set_color(global.filemenu_color)
 
 for (i=0;i<3;i+=1) {
     savedata_select(i,0)
