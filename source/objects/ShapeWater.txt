@@ -2,6 +2,6 @@ sprite=sprGravUpBlock
 visible=1
 solid=0
 persistent=0
-depth=0
+depth=-50
 parent=AnyWater
 mask=
