@@ -25,6 +25,10 @@ if (global.savefile_thumbnails) {
         i+=1
     }
 }
+
+sprite=spr_idle
+sprite_speed=0.2*dt
+sprite_frame=0
 #define Step_0
 /*"/*'/**//* YYD ACTION
 lib_id=1

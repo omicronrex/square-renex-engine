@@ -1,6 +1,4 @@
-var fixspr,dy,xs,ys;
-
-fixspr=settings("anim")
+var dy,xs,ys;
 
 if (argument0=="mask") {
     if (vflip==-1) {
@@ -13,51 +11,52 @@ if (argument0=="mask") {
 }
 
 if (argument0=="step") {
+    sprite_previous=sprite
     if (ladder) {
-        if (hspeed!=0) {
-            sprite_index=sprPlayerLadderLR
-            image_speed=0.2
-        } else if (vspeed!=0) {
-            sprite_index=sprPlayerLadderUD
-            image_speed=0.2
-        } else {
-            sprite_index=sprPlayerBack
-            image_speed=0.1
-        }
+        if (hspeed!=0) sprite=spr_climbside
+        else if (vspeed!=0) sprite=spr_climbup
+        else sprite=spr_climb
     } else if (hang) {
-        if (fixspr) sprite_index=sprPlayerSliding
-        else sprite_index=sprPlayerSlidingOld
-        image_speed=0.5
+        sprite=spr_slide
     } else if (!onGround) {
-        if (vspeed*vflip<-0.05) {
-            if (fixspr) {
-                sprite_index=sprPlayerJump
-                image_speed=0
-                image_index+=0.5
-                if (image_index>=4) image_index-=2
-            } else {
-                sprite_index=sprPlayerJumpOld
-                image_speed=0.5
-            }
-        }
-        if (vspeed*vflip>0.05) {
-            if (fixspr) sprite_index=sprPlayerFall
-            else sprite_index=sprPlayerFallOld
-            image_speed=0.5
-        }
+        if (vspeed*vflip<-0.05) sprite=spr_jump
+        if (vspeed*vflip>0.05) sprite=spr_fall
     } else if (input_h!=0) {
-        if (fixspr) {
-            sprite_index=sprPlayerRunning
-            image_speed=mmf_animspeed(70,80)
-        } else {
-            sprite_index=sprPlayerRunningOld
-            image_speed=0.5
+        sprite=spr_run
+    } else {
+        sprite=spr_idle
+    }
+
+    if (settings("anim")) {
+        switch (sprite) {
+            case spr_idle:       sprite_speed=0.2 break
+            case spr_run:        sprite_speed=mmf_animspeed(70,80) break
+            case spr_jump:       sprite_speed=0 sprite_frame+=0.5 if (sprite_frame>=4) sprite_frame-=2 break
+            case spr_fall:       sprite_speed=0 sprite_frame+=0.5 if (sprite_frame>=4) sprite_frame-=2 break
+            case spr_slide:      sprite_speed=0.5 break
+            case spr_climb:      sprite_speed=0.1 break
+            case spr_climbup:    sprite_speed=0.2 break
+            case spr_climbside:  sprite_speed=0.2 break
+            case spr_taunt:      break
         }
     } else {
-        if (fixspr) sprite_index=sprPlayerIdle
-        else sprite_index=sprPlayerIdleOld
-        image_speed=0.2
+        switch (sprite) {
+            case spr_idle:       sprite_speed=0.2 break
+            case spr_run:        sprite_speed=0.5 break
+            case spr_jump:       sprite_speed=0.5 break
+            case spr_fall:       sprite_speed=0.5 break
+            case spr_slide:      sprite_speed=0.5 break
+            case spr_climb:      sprite_speed=0.1 break
+            case spr_climbup:    sprite_speed=0.2 break
+            case spr_climbside:  sprite_speed=0.2 break
+            case spr_taunt:      break
+        }
     }
+
+    sprite_number=player_sprite_number(sprite)
+
+    sprite_frame=modwrap(sprite_frame+sprite_speed,0,sprite_number)
+    if (sprite!=sprite_previous) sprite_frame=0
 
     if (global.angle_slopes) sprite_angle+=angle_difference(sprite_angle,slope_angle)*0.4
 
@@ -71,12 +70,13 @@ if (argument0=="draw") {
     xs=abs(image_xscale)*facing
     ys=abs(image_yscale)*vflip
 
-    if (fixspr) draw_sprite_ext(drawspr,floor(drawframe),floor(drawx+(image_xscale<0)),dy,xs,ys,drawangle,image_blend,image_alpha)
-    else draw_sprite_ext(drawspr,floor(drawframe),floor(drawx),dy,xs,ys,drawangle,image_blend,image_alpha)
+    celeste=(global.celeste_cape and djump>=maxjumps)
+
+    draw_player_sprite(drawspr,drawframe,drawx,drawy,xs,ys,drawangle,image_blend,image_alpha,celeste)
 
     if (bow) {
         dy=floor(bowy+abs(lengthdir_y(2,drawangle))*vflip+(vflip==-1))
-        if ((drawspr=sprPlayerIdle || drawspr=sprPlayerIdleOld) && floor(drawframe)==3) dy+=vflip //bobbing
+        if (drawspr=spr_idle && floor(drawframe)==3) dy+=vflip //bobbing
         draw_sprite_ext(sprBow,0,floor(bowx),dy,xs,ys,drawangle,image_blend,image_alpha)
     }
 

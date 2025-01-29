@@ -191,7 +191,7 @@ custom_init
 generate_save_thumbnail
 list_obstructions
 load_sounds
-room_find
+
 warp_to
 input_leftright
 input_disable
@@ -304,8 +304,8 @@ shader_snow
 vs3_snow
 ps3_snow
 sound_play_music
-skin_celeste_cape
-cape_check
+
+
 rtime
 ease
 vine_check_left
@@ -341,3 +341,5 @@ example_trap_script
 camera_smooth_rate
 camera_get_smooth_rate
 round_up
+draw_player_sprite
+player_sprite_number

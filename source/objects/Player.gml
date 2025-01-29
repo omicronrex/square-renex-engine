@@ -75,20 +75,24 @@ baseGrav=baseGravDefault
 slope_angle=0
 sprite_angle=0
 
-image_speed=0.2
+image_speed=0
 gravity=baseGrav
 walljump=0
 checkdeath=0
 walljumpboost=0
 vsplatform=0
 
+sprite=spr_idle
+sprite_frame=0
+sprite_speed=0.2
+
 oldx=x oldy=y
-oldspr=sprite_index
-oldfr=image_index
+oldspr=sprite
+oldfr=sprite_frame
 oldangle=image_angle
 newx=x newy=y
-newspr=sprite_index
-newfr=image_index
+newspr=sprite
+newfr=sprite_frame
 newangle=image_angle
 
 oldbowx=x oldbowy=y
@@ -753,7 +757,7 @@ applies_to=self
 if (key_jump(vi_pressed)) if (instance_place(x,y+1*vflip,NekoronAir) && !onGround) {
     vspeed=-jump2*vflip
     repeat (choose(1,2,3)) sound_play_auto("sndDJump")
-    image_index=0
+    sprite_frame=0
 }
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -1030,10 +1034,6 @@ if (dotkid) {
     sprite_index=sprDotKid
     mask_index=-1
 }
-
-//activate celeste cape & reset it if you change the variable state
-if (global.celeste_cape && global.player_skin==global.player_default_skin) change_skin(skin_celeste_cape)
-else if (!global.celeste_cape && global.player_skin==skin_celeste_cape) change_skin(global.player_default_skin)
 
 //fix sprite for first frame
 script_execute(global.player_skin,"step")

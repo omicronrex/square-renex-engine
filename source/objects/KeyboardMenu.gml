@@ -23,7 +23,9 @@ for (i=0;i<vii_sizeof;i+=1) {
 keyname[vii_sizeof]=lang("keyresetkeys")
 keytext[vii_sizeof]=""
 
-image_speed=0.2*dt
+sprite=spr_idle
+sprite_speed=0.2*dt
+sprite_frame=0
 #define Alarm_0
 /*"/*'/**//* YYD ACTION
 lib_id=1

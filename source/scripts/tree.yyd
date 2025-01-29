@@ -158,7 +158,6 @@
 	|move_player_object
 	|profiler_setup
 	|activate_objects
-	|room_find
 	|autotile_type
 	|autotile
 	|instance_activate_all_safe
@@ -192,7 +191,6 @@
 	|player_update_sprite
 	|player_update_sprite_coords
 	|player_uncherry
-	|cape_check
 	|has_item
 	|check_plat_snap
 	|check_crush
@@ -210,6 +208,8 @@
 	|vine_check_left
 	|vine_check_right
 	|correct_player_mask
+	|draw_player_sprite
+	|player_sprite_number
 +keypick
 	|key_clear
 	|key_add
@@ -251,7 +251,6 @@
 +skins
 	|change_skin
 	|skin_default
-	|skin_celeste_cape
 	|skin_dotkid
 	|skin_shootkid
 	|skin_vvvvvv

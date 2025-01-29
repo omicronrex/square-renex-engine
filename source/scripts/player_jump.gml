@@ -39,7 +39,6 @@ if (vvvvvv) {
             }
             sound_play_auto("sndJump")
             djump=1
-            image_index=0
             trigger_broadcast(tr_playerjump)
             coyoteTime=0
             jump_timer=0
@@ -56,7 +55,6 @@ if (vvvvvv) {
             if (djump>2) {
                 repeat (5) instance_create(random_range(x-5,x+5),random_range(y+4,y+4),TripleJumpEffect)
             }
-            image_index=0
             trigger_broadcast(tr_playerdjump)
             coyoteTime=0
             jump_timer=0

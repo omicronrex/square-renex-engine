@@ -42,8 +42,10 @@ numoptions=ds_list_size(optlist)
 
 xcursor=xdraw-18
 ycursor=ydraw+9
-sprite=sprPlayerIdle
-image_speed=0.2*50/room_speed
+
+sprite=spr_idle
+sprite_speed=0.2*dt
+sprite_frame=0
 #define Destroy_0
 /*"/*'/**//* YYD ACTION
 lib_id=1

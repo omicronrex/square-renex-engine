@@ -2,8 +2,8 @@ if (framefac==ff_immediate) {
     //immediate mode for 50hz no slowdown
     drawx=x
     drawy=y
-    drawspr=sprite_index
-    drawframe=image_index
+    drawspr=sprite
+    drawframe=sprite_frame
     drawangle=image_angle+sprite_angle
     bowx=newbowx
     bowy=newbowy
@@ -18,4 +18,4 @@ if (framefac==ff_immediate) {
 }
 
 if (vflip==1) drawy=floor(drawy)
-else drawy=ceil(drawy)-1
+else drawy=ceil(drawy)

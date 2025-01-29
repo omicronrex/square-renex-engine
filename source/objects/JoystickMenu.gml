@@ -29,8 +29,9 @@ locked=0
 
 event_user(0)
 
-
-image_speed=0.2*dt
+sprite=spr_idle
+sprite_speed=0.2*dt
+sprite_frame=0
 #define Alarm_0
 /*"/*'/**//* YYD ACTION
 lib_id=1

@@ -16,10 +16,12 @@ for (i=0;i<numoptions;i+=1) {
     script_execute(ds_list_find_value(global.optlist,i),opt_begin)
 }
 
-image_speed=0.2*dt
+sprite=spr_idle
+sprite_speed=0.2*dt
+sprite_frame=0
+
 xcursor=xdraw-18
 ycursor=ydraw+(ysep*sel)+18
-sprite=sprPlayerIdle
 
 angle=0
 dead=0
@@ -74,7 +76,9 @@ for (i=0;i<numoptions;i+=1) {
     draw_text(xdraw+xsep,ydraw+(ysep*i),script_execute(ds_list_find_value(global.optlist,i),opt_value))
 }
 
-if (!dead) draw_sprite_ext(sprite,floor(image_index),xcursor,ycursor,1,1,angle,$ffffff,1)
+sprite_frame+=sprite_speed
+
+if (!dead) draw_player_sprite(sprite,sprite_frame,xcursor,ycursor,1,1,angle,$ffffff,1)
 
 //button info
 draw_set_font(fntFileSmall)

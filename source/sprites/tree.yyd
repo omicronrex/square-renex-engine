@@ -48,24 +48,8 @@
 	|sprDotKidFlip
 	|sprBullet
 	|sprBow
-	+Needle
-		|sprPlayerIdleOld
-		|sprPlayerRunningOld
-		|sprPlayerJumpOld
-		|sprPlayerFallOld
-		|sprPlayerSlidingOld
-	+Fixed
-		|sprPlayerIdle
-		|sprPlayerRunning
-		|sprPlayerJump
-		|sprPlayerFall
-		|sprPlayerSliding
-	+Bonus
-		|sprPlayerLookDown
-		|sprPlayerAimUp
-	|sprPlayerBack
-	|sprPlayerLadderUD
-	|sprPlayerLadderLR
+	|sprPlayerDefault
+	|sprPlayerNeedle
 	+Death
 		|sprBloodCluster
 		|sprBlood
@@ -73,17 +57,6 @@
 		|sprGibsHead
 		|sprGibsArm
 		|sprGibsFoot
-	+Celeste Cape
-		|sprPlayerIdleOldC
-		|sprPlayerJumpC
-		|sprPlayerJumpOldC
-		|sprPlayerRunningC
-		|sprPlayerRunningOldC
-		|sprPlayerSlidingC
-		|sprPlayerSlidingOldC
-		|sprPlayerFallC
-		|sprPlayerFallOldC
-		|sprPlayerIdleC
 +Cherries
 	|sprCherry
 	|sprCherryOrange

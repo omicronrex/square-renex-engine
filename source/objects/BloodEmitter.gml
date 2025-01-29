@@ -13,23 +13,25 @@ if (instance_exists(Player)) if (Player.dotkid) {
     blood=min(blood,2)
 }
 
+sprite=spr_idle
+sprite_frame=0
+celeste=0
+
 if (!blood) {
     bleeding=0
     alarm[1]=room_speed/2
     if (instance_exists(Player)) {
-        sprite_index=Player.sprite_index
-        image_index=Player.image_index
-        image_xscale=Player.image_xscale
+        sprite=Player.sprite
+        sprite_frame=Player.sprite_frame
+        image_xscale=Player.facing
         image_yscale=Player.vflip
         image_angle=Player.drawangle
         image_blend=Player.image_blend
         image_alpha=Player.image_alpha
+        celeste=(global.celeste_cape and Player.djump>=Player.maxjumps)
         if (Player.bow) {
             i=instance_create(x,y,GibParticle) i.sprite_index=sprBow i.gravity=(0.1+random(0.2))*sign(Player.gravity)
         }
-    } else {
-        sprite_index=sprPlayerIdle
-        image_index=floor(image_index)
     }
     exit
 }
@@ -114,3 +116,20 @@ if (other.solid) {
     speed=0
     gravity=0
 }
+#define Draw_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+draw_player_sprite(
+    sprite,
+    sprite_frame,
+    x,y,
+    image_xscale,
+    image_yscale,
+    image_angle,
+    image_blend,
+    image_alpha,
+    celeste
+)
