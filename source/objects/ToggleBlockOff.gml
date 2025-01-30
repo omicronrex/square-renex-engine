@@ -21,8 +21,6 @@ action_id=603
 applies_to=self
 */
 if (ready) {
-    i=instance_create(x,y,ToggleBlockOn)
-    i.sprite_index=sprite_index
-    i.image_index=(sprite_index==sprToggleBlockOff)
+    instance_create(x,y,ToggleBlockOn)
     instance_destroy()
 }
