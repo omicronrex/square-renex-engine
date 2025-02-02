@@ -30,6 +30,8 @@ if (active) {
     if key_down() y+=spd
     if key_left() x-=spd
     if key_right() x+=spd
+    x=clamp(x,0,room_width)
+    y=clamp(y,0,room_height)
 } else {
     x=view_xview+global.width/2
     y=view_yview+global.height/2
