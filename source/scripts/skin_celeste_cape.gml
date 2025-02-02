@@ -16,13 +16,13 @@ if (argument0=="step") {
     if (ladder) {
         if (hspeed!=0) {
             sprite_index=sprPlayerLadderLR
-            image_speed=0.2
+            image_speed=0.5
         } else if (vspeed!=0) {
             sprite_index=sprPlayerLadderUD
-            image_speed=0.2
+            image_speed=0.5
         } else {
-            sprite_index=sprPlayerBack
-            image_speed=0.1
+            sprite_index=sprPlayerLadderUD
+            image_speed=0
         }
     } else if (hang) {
         if (fixspr) sprite_index=cape_check(sprPlayerSliding,sprPlayerSlidingC)
