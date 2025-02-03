@@ -3,7 +3,7 @@
 with (Player) {
     dot_hitbox=savedata("whitedot")
     dotkid=savedata("dotkid")
-    shootkid=savedata("shootkid")
+    telekid=savedata("telekid")
     maxjumps=savedata("numjumps")
     vvvvvv=savedata("vvvvvv")
     beamstate=savedata("beamstate")

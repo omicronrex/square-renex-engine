@@ -6,10 +6,10 @@ if (!global.contact_saves) {
     }
 }
 
-if (!instance_exists(ShootKid)) {
-    if(global.accurate_shootkid && !place_free(x+12*image_xscale,y)) exit
-    sound_play_auto("sndShootkid")
-    i=instance_create(x,y,ShootKid)
+if (!instance_exists(TeleKid)) {
+    if (!place_free(x+12*image_xscale,y)) exit
+    sound_play_auto("sndTelekid")
+    i=instance_create(x,y,TeleKid)
     i.direction+=sprite_angle
 
     trigger_broadcast(tr_playershoot)

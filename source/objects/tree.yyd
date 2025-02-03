@@ -265,9 +265,9 @@
 		|HighGravField
 		|LowSpeedField
 		|HighSpeedField
-		|ShootkidEnable
-		|ShootkidDisable
-		|ShootKid
+		|TelekidEnable
+		|TelekidDisable
+		|TeleKid
 	+Pastel
 		|PastelSpikeBlack
 		|PastelSpikeBlackU

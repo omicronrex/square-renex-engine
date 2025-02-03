@@ -45,7 +45,7 @@ ladderjump=false
 hang=false
 dot_hitbox=false
 dotkid=false
-shootkid=false
+telekid=false
 onfire=false
 vvvvvv=false
 

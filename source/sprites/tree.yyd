@@ -284,8 +284,8 @@
 		|sprStarDoubleJump
 		|sprStarTripleJump
 		|sprNangTJumpParticle
-		|sprShootkidEnabler
-		|sprShootkidDisabler
+		|sprTelekidEnabler
+		|sprTelekidDisabler
 	+See the Moon
 		|sprBeamPurple
 		|sprBeamYellow

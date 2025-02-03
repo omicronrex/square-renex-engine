@@ -166,8 +166,6 @@ global.release_mode=false
     global.celeste_cape=false
     //turns the kid's bow blue if the player can't double jump (only appears on Medium)
     global.celeste_bow=false
-    //prevents shootkid from working if too close to a wall
-    global.accurate_shootkid=true
     //enable distance vines (classic engine vine check using distance_to_object)
     global.distance_vines=false
     //allow the player to grab vines while on the floor

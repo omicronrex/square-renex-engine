@@ -91,8 +91,8 @@ draw_text_outline
 
 skin_default
 weapon_default
-weapon_shootkid
-skin_shootkid
+weapon_telekid
+skin_telekid
 skin_vvvvvv
 skin_dotkid
 instance_deactivate_all_safe

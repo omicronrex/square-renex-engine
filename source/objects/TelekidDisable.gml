@@ -4,9 +4,9 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-if (other.shootkid) {
+if (other.telekid) {
     sound_play_auto("sndShrink")
-    other.shootkid=false
+    other.telekid=false
     change_skin(skin_default)
     change_weapon(weapon_default)
 }

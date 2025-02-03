@@ -4,7 +4,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-if (!other.dotkid && !other.dot_hitbox && !other.shootkid && !other.vvvvvv) {
+if (!other.dotkid && !other.dot_hitbox && !other.telekid && !other.vvvvvv) {
     sound_play_auto("sndShrink")
     other.dotkid=true
     change_skin(skin_dotkid)

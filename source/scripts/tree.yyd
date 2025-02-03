@@ -254,13 +254,13 @@
 	|skin_default
 	|skin_celeste_cape
 	|skin_dotkid
-	|skin_shootkid
+	|skin_telekid
 	|skin_vvvvvv
 +weapons
 	|change_weapon
 	|weapon_default
 	|weapon_8dir
-	|weapon_shootkid
+	|weapon_telekid
 +sound
 	|load_sounds
 	|mfx_add
