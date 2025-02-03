@@ -52,19 +52,21 @@ if (moveplayer) {
     }
 }
 
-if (!destroy_timer) {
-    if (instance_place(x,y+2,Player) or instance_place(x,y-2,Player)) {
-        primed=1
-        image_blend=$4040ff
-    } else {
-        if (primed) {
-            destroy_timer=destroy_time
-            sound_play_auto("sndPlatformDestroy")
+if (destroy_time) {
+    if (!destroy_timer) {
+        if (instance_place(x,y+2,Player) or instance_place(x,y-2,Player)) {
+            primed=1
+            image_blend=$4040ff
+        } else {
+            if (primed) {
+                destroy_timer=destroy_time
+                sound_play_auto("sndPlatformDestroy")
+            }
         }
+    } else {
+        destroy_timer-=1
+        if (destroy_timer==0) instance_destroy()
     }
-} else {
-    destroy_timer-=1
-    if (destroy_timer==0) instance_destroy()
 }
 #define Collision_BulletBlock
 /*"/*'/**//* YYD ACTION
