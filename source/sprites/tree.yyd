@@ -257,7 +257,7 @@
 		|sprYoshiRunning
 		|sprYoshiJump
 		|sprMuncher
-		|sprSmwSaw
+		|sprSMWSaw
 	+White Dot
 		|sprWhiteDotter
 		|sprWhiteUndotter

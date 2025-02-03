@@ -223,7 +223,7 @@ action_id=603
 applies_to=self
 */
 if (active) {
-    if (other.object_index=SmwSaw) {
+    if (other.object_index=SMWSaw) {
         if (y<=other.y-2) {
             sound_play_auto("sndYoshiJump")
             if (key_jump())

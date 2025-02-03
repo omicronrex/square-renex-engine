@@ -44,6 +44,7 @@
 	|custom_region_activation
 	|custom_window_border
 	|gm82room_jtool_table
+	|custom_object_activation
 +saving
 	|savedata_init
 	|settings_default
@@ -146,6 +147,7 @@
 	|update_caption_deathtime
 	|cement
 	|instance_deactivate_all_safe
+	|instance_activate_all_safe
 	|update_activation
 	|instance_activate_around
 	|add_string
@@ -157,11 +159,9 @@
 	|show_message_right
 	|move_player_object
 	|profiler_setup
-	|activate_objects
 	|room_find
 	|autotile_type
 	|autotile
-	|instance_activate_all_safe
 	|construct
 	|trigger_broadcast
 	|update_triggers
