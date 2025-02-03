@@ -16,6 +16,8 @@
 		|opt_savevalign
 		|opt_caption
 		|opt_left_right
+		|opt_celeste
+		|opt_pausesounds
 		|opt_rebind_keyboard
 		|opt_rebind_joystick
 	+game keys
@@ -251,7 +253,6 @@
 +skins
 	|change_skin
 	|skin_default
-	|skin_celeste_cape
 	|skin_dotkid
 	|skin_telekid
 	|skin_vvvvvv

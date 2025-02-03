@@ -25,37 +25,37 @@ if (argument0=="step") {
             image_speed=0
         }
     } else if (hang) {
-        if (fixspr) sprite_index=sprPlayerSliding
-        else sprite_index=sprPlayerSlidingOld
+        if (fixspr) sprite_index=cape_check(sprPlayerSliding,sprPlayerSlidingC)
+        else sprite_index=cape_check(sprPlayerSlidingOld,sprPlayerSlidingOldC)
         image_speed=0.5
     } else if (!onGround) {
         if (vspeed*vflip<-0.05) {
             if (fixspr) {
-                sprite_index=sprPlayerJump
+                sprite_index=cape_check(sprPlayerJump,sprPlayerJumpC)
                 image_speed=0
                 image_index+=0.5
                 if (image_index>=4) image_index-=2
             } else {
-                sprite_index=sprPlayerJumpOld
+                sprite_index=cape_check(sprPlayerJumpOld,sprPlayerJumpOldC)
                 image_speed=0.5
             }
         }
         if (vspeed*vflip>0.05) {
-            if (fixspr) sprite_index=sprPlayerFall
-            else sprite_index=sprPlayerFallOld
+            if (fixspr) sprite_index=cape_check(sprPlayerFall,sprPlayerFallC)
+            else sprite_index=cape_check(sprPlayerFallOld,sprPlayerFallOldC)
             image_speed=0.5
         }
     } else if (input_h!=0) {
         if (fixspr) {
-            sprite_index=sprPlayerRunning
+            sprite_index=cape_check(sprPlayerRunning,sprPlayerRunningC)
             image_speed=mmf_animspeed(70,80)
         } else {
-            sprite_index=sprPlayerRunningOld
+            sprite_index=cape_check(sprPlayerRunningOld,sprPlayerRunningOldC)
             image_speed=0.5
         }
     } else {
-        if (fixspr) sprite_index=sprPlayerIdle
-        else sprite_index=sprPlayerIdleOld
+        if (fixspr) sprite_index=cape_check(sprPlayerIdle,sprPlayerIdleC)
+        else sprite_index=cape_check(sprPlayerIdleOld,sprPlayerIdleOldC)
         image_speed=0.2
     }
 

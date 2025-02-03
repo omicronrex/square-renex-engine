@@ -12,6 +12,10 @@ path_speed=0
 snap="yuuutu"
 snap_type=0
 
+destroy_time=0
+destroy_timer=0
+primed=false
+
 phase=false
 
 hdeficit=0
@@ -48,9 +52,19 @@ if (moveplayer) {
     }
 }
 
-if (t>=0) {
-    t-=1
-    if (t==0) instance_destroy()
+if (!destroy_timer) {
+    if (instance_place(x,y+2,Player) or instance_place(x,y-2,Player)) {
+        primed=1
+        image_blend=$4040ff
+    } else {
+        if (primed) {
+            destroy_timer=destroy_time
+            sound_play_auto("sndPlatformDestroy")
+        }
+    }
+} else {
+    destroy_timer-=1
+    if (destroy_timer==0) instance_destroy()
 }
 #define Collision_BulletBlock
 /*"/*'/**//* YYD ACTION
@@ -80,6 +94,7 @@ applies_to=self
 //field phase: false - lets the platform go through blocks
 //field hspeed: number
 //field vspeed: number
+//field destroy_time: number - frames to destroy platform after player walks off
 
 if (snap=="yuuutu") snap_type=0
 if (snap=="always") snap_type=1
@@ -116,6 +131,7 @@ if (sprite_index=sprDynamicPlatform && global.platform_9slice) {
             d3d_transform_stack_push()
             d3d_transform_add_rotation_z(image_angle)
             d3d_transform_add_translation(x-0.5,y-0.5,0)
+            draw_set1(image_blend,image_alpha)
             if (w>24 && h>24) {
                 //9slice
                 draw_primitive_begin_texture(pr_trianglestrip,sprite_get_texture(sprPlatform9slice,5))
@@ -218,6 +234,7 @@ if (sprite_index=sprDynamicPlatform && global.platform_9slice) {
                 draw_primitive_end()
             }
             d3d_transform_stack_pop()
+            draw_reset()
         }
     }
 } else if (sprite_index!=-1) draw_self()

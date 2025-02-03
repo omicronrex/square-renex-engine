@@ -12,7 +12,6 @@ if (vvvvvv) {
         onGround=false
     }
 } else if (!hang && !onVineL && !onVineR) {
-
     //get shape water type
     var sw,swt;
     sw=instance_place(x,y,ShapeWater)
@@ -30,12 +29,6 @@ if (vvvvvv) {
             vspeed=-jump*vflip
             if (global.use_momentum_values) {
                 with (instance_place(x,y+vflip,Platform)) other.hspeed+=hspeed
-            }
-            if (global.platform_destroy_time!=-1) {
-                with (instance_place(x,y+vflip,Platform)) {
-                    t=global.platform_destroy_time
-                    sound_play_auto("sndPlatformDestroy")
-                }
             }
             sound_play_auto("sndJump")
             djump=1

@@ -1008,7 +1008,8 @@ if (instance_place(x,y,ScreenWrap)) {
                 }
             } else {
                 //death.
-                if (global.die_outside_room || instance_place(x,y,DieOutside)) kill_player()
+                if not (!global.die_outside_top && y<0 && x=median(0,x,room_width)) 
+                    if (global.die_outside_room || instance_place(x,y,DieOutside)) kill_player()
             }
         }
     }
@@ -1030,10 +1031,6 @@ if (dotkid) {
     sprite_index=sprDotKid
     mask_index=-1
 }
-
-//activate celeste cape & reset it if you change the variable state
-if (global.celeste_cape && global.player_skin==global.player_default_skin) change_skin(skin_celeste_cape)
-else if (!global.celeste_cape && global.player_skin==skin_celeste_cape) change_skin(global.player_default_skin)
 
 //fix sprite for first frame
 script_execute(global.player_skin,"step")

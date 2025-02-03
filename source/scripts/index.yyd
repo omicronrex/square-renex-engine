@@ -304,7 +304,7 @@ shader_snow
 vs3_snow
 ps3_snow
 sound_play_music
-skin_celeste_cape
+
 cape_check
 rtime
 ease
@@ -341,3 +341,5 @@ example_trap_script
 camera_smooth_rate
 camera_get_smooth_rate
 round_up
+opt_pausesounds
+opt_celeste

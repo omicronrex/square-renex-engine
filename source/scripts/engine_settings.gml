@@ -111,11 +111,11 @@ global.release_mode=false
     global.press_shoot_saves=false
     //let all saves work even while flipped the wrong way
     global.flip_saves=true
-    //saves display above them the time they were first saved
+    //saves display the time they were first saved above them
     global.idolmaster_saves=true
     //save death & time stats in a .csv file in the save location
     //recommended to turn this off when publishing your game
-    global.save_csv_stats=true
+    global.save_csv_stats=false
     //use the brighter vhard save sprite instead of the regular one
     global.vhard_save_sprite=true
     //make the NANG fields animate by scrolling the sprite
@@ -150,23 +150,19 @@ global.release_mode=false
     global.player_default_weapon=weapon_default
     //kill player when leaving the room region
     global.die_outside_room=true
+    //also kill the player when leaving the room off the top
+    global.die_outside_top=false
     //allow pressing A and D to move 1 pixel left and right to change your align
     //regardless of debug mode
     global.a_d_trick=false
     //make the Medium difficilty bow lag behind like in the original game
     global.bow_lag=true
-    //turns the kid's cape blue if the player can't double jump
-    global.celeste_cape=false
     //turns the kid's bow blue if the player can't double jump (only appears on Medium)
     global.celeste_bow=false
     //enable distance vines (classic engine vine check using distance_to_object)
     global.distance_vines=false
     //allow the player to grab vines while on the floor
     global.floor_vines=false
-    //time in frames to destroy a platform after it's been jumped on
-    //keep it at -1 for them to never destroy
-    //it also plays a sound when jumped on, see player_jump()
-    global.platform_destroy_time=-1
     //angle the player (and the player's bullets) to match slopes
     global.angle_slopes=true
     //time in frames to disable pausing after exiting the pause menu
@@ -199,8 +195,6 @@ global.release_mode=false
     //1 - yuuutu engine sound effect
     //2 - yosniper engine sound effect
     global.break_sound_effect=0
-    //pause all audio on pause
-    global.pause_sound_on_game_pause=true
     //stop sound effects when changing rooms
     global.stop_sounds_on_room_change=true
     //disable automatic pan and volume
