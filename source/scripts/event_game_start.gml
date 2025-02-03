@@ -141,7 +141,6 @@ if (global.num_difficulties==1) {
     global.is_impossible[global.single_difficulty]=global.is_impossible[0]
 }
 
-global.optimize_solids=median(0,global.optimize_solids,8)
 global.break_sfx=pick(median(0,global.break_sound_effect,2),"sndBlockBreak","sndBlockBreakYuuutu","sndBlockBreakYosniper")
 
 set_application_title(global.game_title)

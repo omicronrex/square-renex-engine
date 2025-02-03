@@ -118,11 +118,6 @@ global.release_mode=false
     global.save_csv_stats=true
     //use the brighter vhard save sprite instead of the regular one
     global.vhard_save_sprite=true
-    //(1-8) reduces lag during gameplay, but causes a small hiccup on room start
-    //each pass reduces solid instance count by almost half by gluing blocks together
-    //so with 2 passes we should only have around 30% of block instances
-    //if you need separate block objects, set this to 0
-    global.optimize_solids=2
     //make the NANG fields animate by scrolling the sprite
     global.animated_nang_fields=true
     //pause the game when unfocused (automatically unpauses when re-focused)

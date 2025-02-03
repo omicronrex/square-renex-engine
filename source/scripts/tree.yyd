@@ -150,7 +150,6 @@
 	|add_difficulty
 	|add_gizmo
 	|update_caption_deathtime
-	|cement
 	|add_string
 	|lang
 	|collect_items
