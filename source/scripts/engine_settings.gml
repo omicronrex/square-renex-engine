@@ -259,8 +259,11 @@ global.release_mode=false
     //frames to reach target destination if camera smoothing is enabled
     //higher number = camera moves slower
     global.default_smoothing_rate=5
-    //deactivate instances outside of the view
-    global.instance_deactivation=true
+    //deactivates instances outside of the view to save resources
+    //if your game is lagging on larger rooms, it may be useful to turn this on
+    //look inside of instance_deactivate_all_safe, instance_activate_all_safe,
+    //and custom_object_activation to see the rules and options of how this works
+    global.instance_deactivation=false
     //how many screens to keep active, with 20 pixels of margin
     global.instance_activate_screens_w=1
     global.instance_activate_screens_h=1

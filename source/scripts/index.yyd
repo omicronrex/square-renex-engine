@@ -99,7 +99,7 @@ instance_deactivate_all_safe
 draw_sprite_hueshift
 inside_view
 
-custom_object_activation
+custom_instance_activation
 update_activation
 joystick_default
 input_anykey

@@ -43,8 +43,8 @@
 	|custom_music_effects
 	|custom_region_activation
 	|custom_window_border
+	|custom_instance_activation
 	|gm82room_jtool_table
-	|custom_object_activation
 +saving
 	|savedata_init
 	|settings_default
@@ -142,14 +142,15 @@
 	+misc lists
 		|list_nonstick
 		|list_obstructions
+	+deactivation
+		|update_activation
+		|instance_deactivate_all_safe
+		|instance_activate_all_safe
+		|instance_activate_around
 	|add_difficulty
 	|add_gizmo
 	|update_caption_deathtime
 	|cement
-	|instance_deactivate_all_safe
-	|instance_activate_all_safe
-	|update_activation
-	|instance_activate_around
 	|add_string
 	|lang
 	|collect_items
