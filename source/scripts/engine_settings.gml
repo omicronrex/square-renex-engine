@@ -96,8 +96,6 @@ global.release_mode=false
     global.show_deathtime=true
     //CRT closing animation (only on windowed)
     global.closing_animation=true
-    //jump refreshers respawn time - if set to zero, it only respawns when you land
-    global.jump_refresher_timer=0
     //if false, items are only collected upon saving normally
     //otherwise, items are collected immediately
     global.autosave_items=false

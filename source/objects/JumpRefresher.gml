@@ -4,7 +4,8 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-refreshTime=global.jump_refresher_timer
+//default jump refreshers respawn time - if set to zero, it only respawns when you land
+refreshTime=0
 active=1
 #define Alarm_0
 /*"/*'/**//* YYD ACTION
