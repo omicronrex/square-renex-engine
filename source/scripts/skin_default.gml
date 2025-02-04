@@ -60,6 +60,7 @@ if (argument0=="step") {
     }
 
     if (global.angle_slopes) sprite_angle+=angle_difference(sprite_angle,slope_angle)*0.4
+    else sprite_angle+=angle_difference(sprite_angle,0)*0.4
 
     if (dot_hitbox) image_blend=$808080
     else image_blend=$ffffff
