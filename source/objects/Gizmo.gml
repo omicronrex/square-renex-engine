@@ -184,7 +184,14 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-if (!no_destroy_outside) instance_destroy()
+if (!no_destroy_outside && trg) {
+    if (x>room_width and hspeed>0)
+    or (x<0 and hspeed<0)
+    or (y>room_height and vspeed>0)
+    or (y<0 and vspeed<0) {
+        instance_destroy()
+    }
+}
 #define Other_4
 /*"/*'/**//* YYD ACTION
 lib_id=1
