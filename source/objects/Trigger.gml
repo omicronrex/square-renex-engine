@@ -22,29 +22,23 @@ if (group) {
     r=group.bbox_right
     t=group.bbox_top
     b=group.bbox_bottom
-} else {
-    //by default, triggers only work within the same screen.
-    l=World.camera_l
-    r=World.camera_r
-    t=World.camera_t
-    b=World.camera_b
-}
+} else {l=0 r=0 t=0 b=0}
 
 //destroy same color triggerlocks
 with (mylock)
     if (group==instance_place(x,y,TriggerGroup))
-        if (x>=l && x<r && y>=t && y<b)
+        if (x>=l && x<r && y>=t && y<b) or (!group)
             instance_destroy()
 
 //fire same color triggers
 with (mytrig)
     if (group==instance_place(x,y,TriggerGroup))
-        if (x>=l && x<r && y>=t && y<b)
+        if (x>=l && x<r && y>=t && y<b) or (!group)
             if (!instance_place(x,y,TriggerLock))
                 instance_destroy()
 
 //don't destroy button triggers!
 if (!object_is_child_of(Button))
     with (object_index) if (group==instance_place(x,y,TriggerGroup))
-        if (x>=l && x<r && y>=t && y<b)
+        if (x>=l && x<r && y>=t && y<b) or (!group)
             if (!instance_place(x,y,TriggerLock)) instance_destroy()
