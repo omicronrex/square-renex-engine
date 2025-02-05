@@ -1,21 +1,22 @@
 //check if the player needs to die from getting pushed inside a wall
 //returns whether the player was killed
+var d1,d2,relative_speed;
 
 if (!object_is_child_of(Player)) with (Player) check_crush()
 else {
-    //calculate relative speed towards player
-    other.x-=other.hspeed
-    other.y-=other.vspeed
-    var d1;d1=distance_to_object(other.id)
-    other.x+=other.hspeed
-    other.y+=other.vspeed
-    relative_speed=d1-distance_to_object(other.id)
-    if (distance_to_object(other.id)<2+relative_speed) {
-        if (!place_free(x,y)) try_unstuck()
-        if (!place_free(x,y)) {
-            kill_player()
-            return 1
-        }
+    if (dead) exit
+
+    //calculate relative speed of caller towards player
+    other.x-=other.hspeed other.y-=other.vspeed
+    d1=distance_to_object(other.id)
+    other.x+=other.hspeed other.y+=other.vspeed
+    d2=distance_to_object(other.id)
+
+    relative_speed=d1-d2
+
+    if (d2<2+relative_speed) if (!place_free(x,y)) if (!try_unstuck()) {
+        kill_player()
+        return 1
     }
 }
 
