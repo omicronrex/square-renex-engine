@@ -9,7 +9,7 @@ else {
     var d1;d1=distance_to_object(other.id)
     other.x+=other.hspeed
     other.y+=other.vspeed
-    relative_speed=distance_to_object(other.id)-d1
+    relative_speed=d1-distance_to_object(other.id)
     if (distance_to_object(other.id)<2+relative_speed) {
         if (!place_free(x,y)) try_unstuck()
         if (!place_free(x,y)) {
