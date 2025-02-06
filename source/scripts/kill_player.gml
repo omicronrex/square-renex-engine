@@ -34,6 +34,8 @@ else if (!dead) {
                 sound_play_auto(HitCount.sound)
             }
         } else {
+            trigger_broadcast(tr_playerdeath)
+
             if (global.gameover_music==0) {
                 //jingle option
                 if (global.restarting_music) {
