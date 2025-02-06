@@ -24,6 +24,8 @@ path_endaction=path_action_stop
 path_speed=0
 path_absolute=true
 path_scaling=1
+path_xstart=x
+path_ystart=y
 sound=""
 
 scaleh=0
@@ -252,10 +254,14 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-if (path_endaction==path_action_reverse && path_position<=0.5) {
-    path_start(path,path_speed,path_endaction,path_absolute)
+if (path_position>1) {
     path_position=0
-    path_scale=path_scaling
+    x=path_get_x(path_index,path_position)
+    y=path_get_y(path_index,path_position)
+    if (!path_absolute) {
+        x+=path_xstart
+        y+=path_ystart
+    }
 }
 #define Trigger_Trap is Triggered
 /*"/*'/**//* YYD ACTION
@@ -276,6 +282,8 @@ if (sound!="") sound_play_auto(sound)
 if (path!=noone) {
     path_start(path,path_speed,path_endaction,path_absolute)
     path_scale=path_scaling
+    path_xstart=x
+    path_ystart=y
 } else {
     speed=spd
     direction=dir
