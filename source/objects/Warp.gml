@@ -35,6 +35,7 @@ if (warpToPlayerstart) {
     } else {
         warp_to(roomTo,warpCoord[0],warpCoord[1])
     }
+    if (autosave) autosave_asap()
     global.warp_id=warpid
 }
 #define Other_4
@@ -49,6 +50,7 @@ applies_to=self
 //field warpToPlayerstart: instance - (pick a PlayerStart)
 //field warpsound: string
 //field transparent: false
+//field autosave: false
 
 if (persistent && warpsound!="") {
     //we are coming from a previous room, and we have to play a sound

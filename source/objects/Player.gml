@@ -997,12 +997,12 @@ if (instance_place(x,y,ScreenWrap)) {
                     } else if (roomTo!=room) {
                         //warp!
                         input_clear()
-                        if (autosave) autosave_asap()
                         if (warpCoord[0]==noone && warpCoord[1]==noone) {
                             warp_to(roomTo)
                         } else {
                             warp_to(roomTo,warpCoord[0],warpCoord[1])
                         }
+                        if (autosave) autosave_asap()
                         global.warp_id=warpid
                     }
                 }
