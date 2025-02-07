@@ -14,10 +14,10 @@ memcamt=camera_t
 //slow motion updates
 if (!slowing) {
     global.slomo=approach(global.slomo,global.slomoto,global.slomof)
-    sound_kind_pitch(0,global.slomo)
-    sound_kind_pitch(1,global.slomo)
-    sound_kind_pitch(2,global.slomo)
-    sound_kind_pitch(3,global.slomo)
+    sound_kind_pitch(0,global.slomo*room_speed/global.game_speed)
+    sound_kind_pitch(1,global.slomo*room_speed/global.game_speed)
+    sound_kind_pitch(2,global.slomo*room_speed/global.game_speed)
+    sound_kind_pitch(3,global.slomo*room_speed/global.game_speed)
 }
 
 if (is_ingame())
