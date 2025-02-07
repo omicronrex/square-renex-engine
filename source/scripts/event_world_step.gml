@@ -51,7 +51,7 @@ if (is_ingame() && room!=global.difficulty_room) {
     if not (Player.dead or global.pause)
     and not (instance_exists(TimerFreeze))
     and not (global.pause_time_after_clear and savedatap("clear")) {
-        time=savedatap("time")+50/room_speed
+        time=savedatap("time")+global.game_speed/room_speed
         savedatap("time",time)
     }
 
