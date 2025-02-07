@@ -30,7 +30,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-with (other) if (!frozen) {
+with (other) if (!frozen && !dead) {
     if (vflip==-1 || camera_angle()==180) {
         speed=0
         djump=1
