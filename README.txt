@@ -1,7 +1,7 @@
 
     RENEX² ENGINE
     =============
-    version 1.8
+    version 1.8.0
     December 2024
   
   A modern fork of various Game Maker 8 I Wanna Be The Guy fangame
@@ -13,9 +13,8 @@
 
     Duncan
     Floogle
-    Jopagu
+    Natsu
     Plasma
-    roaming97
     Starz0r
     V
     Verve
@@ -30,12 +29,13 @@
     Carnival
     Dung Truong
     IanBoy141
+    Jopagu
     Kayin
     Mark Overmars
-    Natsu
     Nikaple
     Phooey
     Pieceofcheese87
+    roaming97
     The Dookster
     YoYoYoDude
     Zorgo

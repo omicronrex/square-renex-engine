@@ -3,19 +3,10 @@
     RENEX² ENGINE
     =============
     version 1.8.0
-    Dec 2024
+    December 2024
 
   A modern fork of various Game Maker 8 I Wanna Be The Guy fangame
   engines with hundreds of improvements and new features.
-
-  Made by renex and square with vast contributions from
-  the following people at the time of release:
-
-  -------------------------------
-  \   Floogle  Verve  Starz0r   \
-  \  Duncan  V  Jopagu  Plasma  \
-  \   Various other developers  \
-  -------------------------------
 
 */
 
